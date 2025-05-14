@@ -1,0 +1,57 @@
+:root {
+    --md-primary-fg-color: #03A9F4;
+    /* Azul claro */
+    --md-accent-fg-color: #00BCD4;
+    /* Ciano */
+    --md-typeset-a-color: #0288D1;
+    /* Links */
+}
+
+.md-header {
+    background: linear-gradient(to right, #ffffff00 70%, #03A9F420),
+        url('../assets/header-bg.svg') no-repeat right;
+    background-size: contain;
+}
+
+.md-logo img {
+    max-height: 40px;
+}
+
+.md-header__button.md-logo img {
+    height: 48px !important;
+}
+
+.md-header__brand,
+.md-header__title h1 {
+    color: #0288D1 !important;
+    /* Azul claro para o nome "ReMed.io" */
+}
+
+.md-header__button.md-toggle-icon {
+    color: #0288D1 !important;
+    /* Azul para o ícone de alternância (lua/sol) */
+}
+
+.md-header__button.md-toggle-icon.material-icons {
+    color: #0288D1 !important;
+    /* Garantir que o ícone de material design (lua/sol) fique azul */
+}
+
+@media screen and (max-width: 768px) {
+    .md-header__button.md-logo img {
+        height: 36px !important;
+    }
+}
+
+.md-header__button.md-logo {
+    padding: 4px 8px;
+    /* Padding para logo não ficar grudada */
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+    font-family: 'Roboto', sans-serif;
+    color: #0288D1 !important;
+    /* Cor dos títulos dentro das páginas */
+}

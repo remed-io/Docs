@@ -1,6 +1,8 @@
 # remed.io 💊
 
-O projeto consiste na reestruturação do projeto **[Farmácia da Marcia](https://github.com/acamposs/Projeto_oo1)** desenvolvido na disciplina de Orientada a Objetos cursada no ternceiro semestre do curso. O objetivo é melhorar o sistema aplicando conceitos adquiridos posteriormente no curso. O projeto consiste em um sistema de controle de estoque para farmácias, com foco na gestão eficiente de medicamentos e produtos farmacêuticos.
+O projeto consiste na reestruturação do projeto **[Farmácia da Marcia](https://github.com/acamposs/Projeto_oo1)** desenvolvido na disciplina Orientação a Objetos cursada no terceiro semestre do curso. O objetivo é melhorar o sistema aplicando conceitos adquiridos posteriormente no curso. 
+
+O projeto consiste em um sistema de controle de estoque para farmácias, com foco na gestão eficiente de medicamentos e produtos farmacêuticos. 
 
 ## Estrutura do Projeto
 

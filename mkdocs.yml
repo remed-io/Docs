@@ -1,0 +1,38 @@
+site_name: ReMed.io
+theme:
+  name: material
+  language: pt-BR
+  logo: assets/logo.svg
+  favicon: assets/favicon.png
+  palette:
+    - scheme: default
+      primary: light blue
+      accent: cyan
+      toggle:
+        icon: material/weather-night
+        name: Modo escuro
+        color: black
+    - scheme: slate
+      primary: light blue
+      accent: cyan
+      toggle:
+        icon: material/weather-sunny
+        name: Modo claro
+  font:
+    text: Roboto3
+    code: Fira Code
+  features:
+    - navigation.instant
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - search.suggest
+extra_css:
+  - stylesheets/extra.css
+nav:
+  - Início: index.md
+  - Visão Geral: visao-geral.md
+  - Arquitetura: arquitetura.md
+  - Regras de Negócio: regras-negocio.md
+  - Product Backlog: backlog.md
