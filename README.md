@@ -1,6 +1,6 @@
-# remed.io 🥼💊
+# remed.io 💊
 
-**remed.io** é um sistema de estoque divertido e eficiente, que busca simplificar o controle de medicamentos e itens, trazendo praticidade e uma pitada de humor.
+O projeto consiste na reestruturação do projeto **[Farmácia da Marcia](https://github.com/acamposs/Projeto_oo1)** desenvolvido na disciplina de Orientada a Objetos cursada no ternceiro semestre do curso. O objetivo é melhorar o sistema aplicando conceitos adquiridos posteriormente no curso. O projeto consiste em um sistema de controle de estoque para farmácias, com foco na gestão eficiente de medicamentos e produtos farmacêuticos.
 
 ## Estrutura do Projeto
 
@@ -9,10 +9,6 @@ Este projeto está dividido em três partes principais:
 - **[Frontend](https://github.com/remed-io/Frontend)**: Interface do usuário, desenvolvida com React.
 - **[Backend-estoque](https://github.com/remed-io/Backend-estoque)**: A API que gerencia o estoque, construída com FastAPI.
 - **[Docs](https://github.com/remed-io/Docs)**: Toda a documentação do projeto, incluindo diagramas, Product Backlog, e informações do desenvolvimento.
-
-## Motivação do Nome
-
-O nome "remed.io" é inspirado em medicamentos (remédios) e traz um toque cômico e divertido para um sistema de controle de estoque. A ideia é criar uma plataforma que "cuide" da saúde do estoque da sua farmácia de forma fácil e eficiente!
 
 ## Product Backlog
 
@@ -55,6 +51,3 @@ Acompanhe as tarefas e histórias de usuário no nosso [Product Backlog](link_pa
 - **frontend**:
   - React App com estrutura básica e comunicação com o backend.
 
-## Logo
-
-A logo do projeto é uma representação divertida da ideia de remédios e saúde, com um estilo ácido e cômico. Confira no [README do Frontend](link_para_o_frontend) e [README do Docs](link_para_o_docs).
