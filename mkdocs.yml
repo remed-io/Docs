@@ -11,7 +11,6 @@ theme:
       toggle:
         icon: material/weather-night
         name: Modo escuro
-        color: black
     - scheme: slate
       primary: light blue
       accent: cyan
@@ -28,11 +27,16 @@ theme:
     - navigation.top
     - search.highlight
     - search.suggest
+    - header.social
 extra_css:
   - stylesheets/extra.css
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/remed-io
+      name: GitHub da Organização
 nav:
-  - Início: index.md
-  - Visão Geral: visao-geral.md
-  - Arquitetura: arquitetura.md
-  - Regras de Negócio: regras-negocio.md
+  - Visão Geral: index.md
+  - Projeto Antigo: projeto-antigo.md
+  - Regras de Negócio: regra-negocio.md
   - Product Backlog: backlog.md

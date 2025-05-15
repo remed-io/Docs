@@ -1,18 +1,53 @@
+/* Paleta de cores personalizada */
 :root {
     --md-primary-fg-color: #03A9F4;
     /* Azul claro */
     --md-accent-fg-color: #00BCD4;
     /* Ciano */
     --md-typeset-a-color: #0288D1;
-    /* Links */
+    /* Cor dos links */
 }
 
-.md-header {
-    background: linear-gradient(to right, #ffffff00 70%, #03A9F420),
+/* Título da documentação no cabeçalho */
+.md-header__topic .md-ellipsis {
+    color: #0288D1 !important;
+}
+
+/* Cor do ícone de alternância de tema (lua/sol) */
+.md-header__button.md-toggle-icon,
+.md-header__button.md-toggle-icon.material-icons {
+    color: #0288D1 !important;
+}
+
+/* Cor do SVG do botão de tema (claro/escuro) */
+.md-header__button.md-icon svg {
+    fill: #0288D1 !important;
+}
+
+/* Modo claro: cabeçalho branco com gradiente sutil */
+[data-md-color-scheme="default"] .md-header {
+    background: linear-gradient(to right, #ffffff 40%, #03A9F420),
         url('../assets/header-bg.svg') no-repeat right;
     background-size: contain;
 }
 
+/* Modo escuro: cabeçalho igual ao fundo escuro */
+[data-md-color-scheme="slate"] .md-header {
+    background: linear-gradient(to right, #001c2586 40%, #03A9F420),
+        url('../assets/header-bg.svg') no-repeat right;
+    background-size: contain;
+
+}
+
+/* Plano de fundo personalizado do rodapé */
+.md-footer {
+    background: linear-gradient(to left, #ffffff00 40%, #03A9F420),
+        url('../assets/header-bg.svg') no-repeat right;
+    background-size: contain;
+    color: #444;
+}
+
+/* Ajustes no tamanho da logo */
 .md-logo img {
     max-height: 40px;
 }
@@ -21,37 +56,28 @@
     height: 48px !important;
 }
 
-.md-header__brand,
-.md-header__title h1 {
-    color: #0288D1 !important;
-    /* Azul claro para o nome "ReMed.io" */
-}
-
-.md-header__button.md-toggle-icon {
-    color: #0288D1 !important;
-    /* Azul para o ícone de alternância (lua/sol) */
-}
-
-.md-header__button.md-toggle-icon.material-icons {
-    color: #0288D1 !important;
-    /* Garantir que o ícone de material design (lua/sol) fique azul */
-}
-
+/* Logo menor em telas pequenas */
 @media screen and (max-width: 768px) {
     .md-header__button.md-logo img {
         height: 36px !important;
     }
 }
 
+/* Espaçamento da logo */
 .md-header__button.md-logo {
     padding: 4px 8px;
-    /* Padding para logo não ficar grudada */
 }
 
+/* Estilo dos títulos internos */
 .md-typeset h1,
 .md-typeset h2,
 .md-typeset h3 {
     font-family: 'Roboto', sans-serif;
     color: #0288D1 !important;
-    /* Cor dos títulos dentro das páginas */
+}
+
+/* Frases em negrito com cor azul claro */
+.md-typeset strong,
+.md-typeset b {
+    color: #0288D1 !important;
 }
