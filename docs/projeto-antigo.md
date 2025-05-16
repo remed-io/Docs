@@ -62,7 +62,7 @@ Além disso, o sistema utiliza o Maven para gerenciamento de dependências e o J
 > A estrutura de classes do sistema é apresentada abaixo
 
 <p align="center">
-  <a href="raw da imagem" target="_blank">
+  <a href="https://raw.githubusercontent.com/remed-io/Docs/refs/heads/main/docs/assets/diagrama-antigo.png" target="_blank">
     <img src="../assets/diagrama-antigo.png" alt="Diagrama de Classes - Farmacia da Marcia" width="500"/>
 </a>
 </p>
