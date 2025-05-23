@@ -1,137 +1,79 @@
 # Regras de Negócio - Sistema ReMed.io
-> Nessa seção são apresentadas as regras de negócio do sistema baseadas nas melhorias e novas funcionalidades propostas para a aplicação, oferecendo uma visão clara e objetiva do que será implementado. 
+> Nesta seção são apresentadas as regras de negócio do sistema, baseadas na modelagem atualizada e nas funcionalidades propostas. Este documento oferece uma visão clara e objetiva dos processos que serão implementados, alinhados com as práticas operacionais do setor farmacêutico.
+
 ## Objetivos do Sistema
 
-- Armazenar e gerenciar produtos farmacêuticos e cosméticos.
-- Controlar o estoque (entradas, saídas e quantidade mínima).
-- Monitorar produtos vencidos.
-- Registrar movimentações de estoque.
+- Gerenciar produtos farmacêuticos, cosméticos e suplementos alimentares.
+- Controlar o estoque (incluindo entradas, saídas e quantidade mínima).
+- Monitorar validade dos produtos e bloquear vendas de itens vencidos.
+- Registrar e rastrear movimentações de estoque.
 - Associar produtos a fornecedores.
-- Registrar vendas de produtos (funcionalidade adicional para implementação futura).
+- Registrar vendas, garantindo rastreabilidade dos lotes vendidos.
+- Emitir alertas de estoque baixo e vencimento próximo.
 
 ---
 
-## Novas Classes e Funcionalidades
+## Modelagem de Estoque — Descrição Geral
 
-### 1. Estoque
+### **Separação entre Produto e ItemEstoque**
 
-Armazena informações de controle de produtos no estoque.
+- **Produto (`ProdutoBase` e suas subclasses)** representa o catálogo de produtos da farmácia. Armazena informações descritivas como: 
+    
+    - Nome
+    - Descrição
+    - volume
+    - `medicamentos`: Tarja, necessidade de receita, dosagem, principio ativo, forma farmaceutica e via de administração
+    - `consméticos`:Tipo e faixa etária 
+    - `suplementos`:Tipo, sabor e restrição
+  
+  > ⚠️ Produtos não possuem informações operacionais como preço, validade ou quantidade — essas informações estão no `ItemEstoque`.
 
-**Atributos:**
+- **ItemEstoque** representa uma unidade física ou lote de um produto dentro da farmácia. Contém informações operacionais:
 
- - `quantidadeAtual: int`
- - `quantidadeMinima: int`
- - `localArmazenamento: str`
+    - Código de barras
+    - Preço de venda
+    - Data de validade
+    - Fornecedor associado
 
-**Métodos:**
+> **Analogia:**  
+`ProdutoBase`: *"Dipirona 500mg comprimido"*  
+`ItemEstoque`: *"Caixa de Dipirona 500mg, validade 05/2026, preço R$10,00, fornecedor Farmac Distribuidora"*
 
-- `adicionarQuantidade(qtd: int)`
-- `removerQuantidade(qtd: int)`
-- `verificarEstoqueMinimo() -> bool`
-- `produtoVencido() -> bool`
 
----
+### **Gestão de Estoque e Armazenamento**
 
-### 2. MovimentacaoEstoque
+- A classe **Armazem** representa os locais de armazenamento, que podem ser físicos (ex.: estoque central, balcão) ou lógicos (ex.: estoque de cosméticos).
+- Cada armazém possui uma lista de **`ItemEstoque`** e controla:
 
-Registra o histórico de entradas e saídas de produtos.
+    - Quantidade atual
+    - Quantidade mínima (para disparo de alertas)
+    - Localização dos produtos
+    - Validade dos itens (permitindo identificar vencidos ou próximos do vencimento)
 
-**Atributos:**
 
-- `data: datetime`
-- `tipo: str` (`Entrada` ou `Saída`)
-- `quantidade: int`
-- `produto: Produto`
+### **Movimentação de Estoque**
 
----
+- Toda entrada (compra, reposição) ou saída (venda, descarte) de itens gera uma **MovimentacaoEstoque**, que:
 
-### 3. Fornecedor
+    - Possui data, tipo (`Entrada` ou `Saída`), quantidade e item associado.
+    - Atualiza automaticamente a quantidade disponível no armazém.
+    - Mantém um histórico rastreável de movimentações.
 
-Representa o fornecedor dos produtos.
 
-**Atributos:**
+### **Processo de Venda**
 
-- `nome: str`
-- `cnpj: str`
-- `contato: str`
+- A venda é representada pela classe **Venda**, composta por um ou mais **ItemVenda**, cada um vinculado a um **`ItemEstoque`**.
+- Permite:
+    - Identificar exatamente qual lote foi vendido.
+    - Associar preço, validade e fornecedor específicos do momento da venda.
+    - Atender às exigências da vigilância sanitária sobre rastreabilidade.
 
----
-
-### 4. Venda 
-
-*(Funcionalidade futura)*
-
-Registra uma venda de um ou mais produtos.
-
-**Atributos:**
-
-- `dataVenda: datetime`
-- `itens: List[ItemVenda]`
-- `valorTotal: float`
 
 ---
 
-### 5. ItemVenda
+## Regras de Negócio Aplicadas
+- **Controle de venda de produto sem estoque**: Nenhuma venda pode ser realizada de um item que não tenha quantidade suficiente no estoque.
+- **Controle de venda de produtos vencidos**Produtos vencidos não podem ser vendidos (checado via método checar_validade()).
+- **Controle de quantidade de estoque**Alertas são emitidos caso a quantidade de um item atinja ou fique abaixo da quantidade mínima estabelecida.
+- **Controle de rastreabilidade**: Todo produto vendido mantém vínculo com o lote específico (via ItemEstoque), permitindo rastreabilidade conforme exigências legais da vigilância sanitária.
 
-Representa um item dentro de uma venda.
-
-**Atributos:**
-
-- `produto: Produto`
-- `quantidade: int`
-- `precoUnitario: float`
-
----
-
-## Melhorias nas Classes Existentes
-
-### Farmacia
-
-**Novos Atributos:**
-
-- `estoque: List[Estoque]`
-- `fornecedores: List[Fornecedor]`
-- `movimentacoes: List[MovimentacaoEstoque]`
-
-**Novos Métodos:**
-
-- `consultarEstoque()`
-- `registrarEntrada(produto, quantidade)`
-- `registrarSaida(produto, quantidade)`
-- `listarProdutosVencidos()`
-- `relatorioMovimentacoes()`
-
----
-
-### Produto 
-
-**Novos Atributos:**
-
-- `codigoBarras: str`
-- `fornecedor: Fornecedor`
-
-**Novos Métodos:**
-
-- `verificarValidade()`
-- `associarFornecedor(fornecedor: Fornecedor)`
-
----
-
-## Subclasses de Produto
-
-### 1. Medicamento
-
-- `tarja: str` *(ex: preta, vermelha, isento)*
-- `necessitaReceita: bool`
-- `principioAtivo: str`
-
-### 2. Cosmetico
-
-- `tipoPele: str`
-- `faixaEtaria: str`
-
-### 3. SuplementoAlimentar
-
-- `sabor: str`
-- `tipo: str` *(proteína, multivitamínico, energético, etc.)*
-- `restricoes: List[str]` *(ex: lactose, glúten)*

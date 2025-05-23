@@ -1,4 +1,7 @@
 site_name: ReMed.io
+repo_url: https://github.com/remed-io
+repo_name: ReMed.io
+
 theme:
   name: material
   language: pt-BR
@@ -20,6 +23,7 @@ theme:
   font:
     text: Roboto3
     code: Fira Code
+  favicon : assets/logo.svg
   features:
     - navigation.instant
     - navigation.sections

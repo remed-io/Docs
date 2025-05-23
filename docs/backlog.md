@@ -1,6 +1,6 @@
-# Product Backlog
+# Product Backlog — Sistema **ReMed.io**
 
-> Este backlog contém as funcionalidades principais do sistema, com base nas histórias de usuários definidas a partir do [Diagrama de Classe](index.md).
+> Este backlog contém as funcionalidades principais do sistema, baseadas no [Diagrama de Classe](index.md) e nas regras de negócio do sistema ReMed.io.
 
 ---
 
@@ -8,111 +8,132 @@
 
 ### 🔴 Histórias
 
-#### História 1 — Cadastro de Produtos
+---
+
+#### História 1 — Cadastro de Produtos (Catálogo)
 **Como** administrador  
-**Quero** cadastrar produtos no sistema  
-**Para** manter o controle de estoque
+**Quero** cadastrar produtos no catálogo  
+**Para** organizar os tipos de produtos que a farmácia comercializa  
 
-**Critérios de aceitação:**
+**Critérios de aceitação:** 
 
- - Deve ser possível cadastrar: código de barras, nome, preço, validade e fornecedor.
- - Produto deve pertencer a uma subcategoria: Medicamento, Cosmético ou Suplemento.
- - Cada subclasse deve aceitar atributos específicos:
-
-    - **Medicamento**: tarja, necessita receita, princípio ativo.
-    - **Cosmético**: tipo de pele, faixa etária.
-    - **Suplemento Alimentar**: sabor, tipo, restrições.
+- Deve ser possível cadastrar produtos base, vinculando-os a uma subcategoria: Medicamento, Cosmético ou Suplemento Alimentar.  
+- Cada subclasse deve conter atributos específicos (ex.: tarja para medicamentos, tipo de pele para cosméticos, sabor para suplementos).  
+- Este cadastro não contém informações operacionais como preço, validade ou quantidade — apenas dados descritivos.  
 
 ---
 
 #### História 2 — Cadastro de Fornecedores
 **Como** administrador  
 **Quero** cadastrar fornecedores  
-**Para** associá-los aos produtos da farmácia
+**Para** associá-los aos lotes de produtos adquiridos  
 
-**Critérios de aceitação:**
+**Critérios de aceitação:**  
 
-- Deve ser possível cadastrar nome, CNPJ e dados de contato.
+- Cadastro de nome, CNPJ, telefone, e-mail e endereço.  
+- Fornecedor pode ser associado a diferentes lotes (`ItemEstoque`).  
 
 ---
 
-#### História 3 — Cadastro de Estoque
+#### História 3 — Cadastro de Armazéns
 **Como** administrador  
-**Quero** registrar dados de estoque  
-**Para** manter controle da localização e quantidade mínima
+**Quero** cadastrar locais de armazenamento  
+**Para** organizar onde os produtos estão fisicamente ou logicamente armazenados  
 
-**Critérios de aceitação:**
+**Critérios de aceitação:**  
 
-- Deve ser possível definir local de armazenamento, quantidade mínima e quantidade atual.
+- Cadastro do nome do armazém (ex.: Estoque Central, Balcão, Cosméticos).  
+- Definição de quantidade mínima para cada produto nesse armazém (para alertas de estoque baixo).  
 
 ---
 
-#### História 4 — Movimentação de Estoque
+#### História 4 — Cadastro de Itens de Estoque 
 **Como** administrador  
-**Quero** registrar entradas e saídas de produtos  
-**Para** atualizar corretamente o estoque
+**Quero** cadastrar itens de estoque  
+**Para** controlar validade, preço e fornecedor de cada entrada de produto  
 
-**Critérios de aceitação:**
+**Critérios de aceitação:**  
 
-- A movimentação deve ter data, tipo (entrada/saída), quantidade e produto.
-- Deve atualizar automaticamente a quantidade atual no estoque.
+- Cadastro de código de barras, preço de venda, data de validade, fornecedor e armazém.  
+- Cada `ItemEstoque` está vinculado a um `ProdutoBase`.  
 
 ---
 
-#### História 5 — Consulta de Estoque
+#### História 5 — Movimentação de Estoque (Entradas e Saídas)
 **Como** administrador  
-**Quero** consultar os dados do estoque  
-**Para** acompanhar a quantidade atual e validade dos produtos
+**Quero** registrar entradas e saídas de estoque  
+**Para** manter o controle atualizado dos produtos disponíveis  
 
-**Critérios de aceitação:**
+**Critérios de aceitação:**  
 
-- Deve listar quantidade, localização e validade.
-- Produtos vencidos ou com estoque abaixo do mínimo devem ser destacados.
+- Movimentação deve conter: data, tipo (entrada ou saída), quantidade, e item de estoque (lote).  
+- Deve atualizar automaticamente a quantidade no armazém.  
+- Valida se há saldo suficiente para saídas.  
 
 ---
 
-#### História 6 — Relatório de Produtos Vencidos
+#### História 6 — Consulta e Monitoramento de Estoque
 **Como** administrador  
-**Quero** gerar um relatório de produtos vencidos  
-**Para** tomar ações corretivas no estoque
+**Quero** consultar o estoque atual  
+**Para** verificar quantidades, validade, localização e status dos produtos  
 
-**Critérios de aceitação:**
+**Critérios de aceitação:**  
 
-- Deve listar produtos cujo campo validade já passou.
-
----
-
-#### História 7 — Relatório de Movimentações
-**Como** administrador  
-**Quero** gerar relatórios de movimentações  
-**Para** visualizar o histórico de entradas e saídas
-
-**Critérios de aceitação:**
-
-- Deve conter data, tipo, quantidade e produto.
+- Listagem de quantidade atual, validade, armazém e fornecedor dos itens.  
+- Destacar produtos vencidos ou com estoque abaixo do mínimo.  
 
 ---
 
-#### História 8 — Registro de Venda
+#### História 7 — Venda de Produtos com Rastreamento de Lote (Itens de estoque)
+
 **Como** atendente  
-**Quero** registrar vendas de produtos  
-**Para** realizar o controle financeiro
+**Quero** realizar vendas selecionando itens específicos do estoque  
+**Para** garantir rastreabilidade dos lotes e validade  
+
+**Critérios de aceitação:**  
+
+- A venda deve permitir selecionar quais lotes estão sendo vendidos.  
+- Impede a venda de produtos vencidos.  
+- Calcula automaticamente o valor total.  
+- Gera comprovante textual da venda com detalhes dos itens (incluindo lote e validade).  
+
+---
+
+#### História 8 — Relatório de Produtos Vencidos e Próximos do Vencimento
+**Como** administrador  
+**Quero** gerar relatórios de produtos vencidos ou prestes a vencer  
+**Para** tomar decisões de descarte ou promoção dos produtos  
+
+**Critérios de aceitação:** 
+
+- Listagem de produtos com validade expirada ou a vencer em até X dias (parâmetro configurável).  
+
+---
+
+#### História 9 — Relatório de Movimentações de Estoque
+**Como** administrador  
+**Quero** gerar um relatório de movimentações  
+**Para** acompanhar todo o histórico de entradas e saídas do estoque  
 
 **Critérios de aceitação:**
 
-- Deve ser possível selecionar um ou mais produtos.
-- Deve calcular o valor total automaticamente.
-- Deve gerar comprovante textual.
+- Relatório deve incluir: data, tipo de movimentação, quantidade, item de estoque (produto + lote), e armazém.  
 
 ---
 
-### 🟡 Em andamento
+#### História 10 — Alerta de Estoque Crítico
+**Como** administrador  
+**Quero** receber alertas de estoque crítico  
+**Para** evitar falta de produtos essenciais  
 
-*histórias que estão em desenvolvimento.*
+**Critérios de aceitação:**  
+
+- O sistema deve emitir alertas sempre que a quantidade de um item estiver igual ou abaixo da quantidade mínima definida para o armazém.  
 
 ---
 
-### 🟢 Concluído
+## 🟡 Em andamento  
+*Histórias que estão em desenvolvimento.*  
 
-*histórias que já foram finalizadas.*
-
+## 🟢 Concluído  
+*Histórias que já foram finalizadas.*  

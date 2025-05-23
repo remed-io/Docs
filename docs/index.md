@@ -72,3 +72,10 @@ O projeto adota uma arquitetura **modular** baseada em repositórios independent
 </p>
 
 ---
+
+
+        consultar_estoque() List[ItemEstoque]
+        registrar_entrada(item: ItemEstoque, qtd: int) void
+        registrar_saida(item: ItemEstoque, qtd: int) void
+        listar_produtos_vencidos() List[ItemEstoque]
+        relatorio_movimentacoes() List[MovimentacaoEstoque]

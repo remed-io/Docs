@@ -24,11 +24,19 @@
     fill: #0288D1 !important;
 }
 
-/* Plano de fundo personalizado do cabeçalho */
-.md-header {
+/* Modo claro: cabeçalho branco com gradiente sutil */
+[data-md-color-scheme="default"] .md-header {
     background: linear-gradient(to right, #ffffff 40%, #03A9F420),
         url('../assets/header-bg.svg') no-repeat right;
     background-size: contain;
+}
+
+/* Modo escuro: cabeçalho igual ao fundo escuro */
+[data-md-color-scheme="slate"] .md-header {
+    background: linear-gradient(to right, #001c2586 40%, #03A9F420),
+        url('../assets/header-bg.svg') no-repeat right;
+    background-size: contain;
+
 }
 
 /* Plano de fundo personalizado do rodapé */
