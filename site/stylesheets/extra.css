@@ -8,6 +8,20 @@
     /* Cor dos links */
 }
 
+/* Links com cor da marca */
+a {
+    color: #00283a;
+    ;
+}
+
+[data-md-color-scheme="slate"] a {
+    color: #f4f6ff;
+}
+
+a:hover {
+    color: #f4f6ff;
+}
+
 /* Título da documentação no cabeçalho */
 .md-header__topic .md-ellipsis {
     color: #0288D1 !important;
