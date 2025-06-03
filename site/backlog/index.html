@@ -6,14 +6,18 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="Documentação do ReMed.io">
+      
       
       
       
         <link rel="prev" href="../regra-negocio/">
       
       
+        <link rel="next" href="../banco-de-dados/">
       
-      <link rel="icon" href="../assets/favicon.png">
+      
+      <link rel="icon" href="../assets/logo.svg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
@@ -72,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#product-backlog" class="md-skip">
+        <a href="#product-backlog-sistema-remedio" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -188,6 +192,18 @@
       
     
     
+      <div class="md-header__source">
+        <a href="https://github.com/remed-io" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ReMed.io
+  </div>
+</a>
+      </div>
+    
   </nav>
   
 </header>
@@ -220,6 +236,18 @@
     </a>
     ReMed.io
   </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/remed-io" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ReMed.io
+  </div>
+</a>
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -366,9 +394,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#historia-1-cadastro-de-produtos" class="md-nav__link">
+  <a href="#historia-1-cadastro-de-produtos-catalogo" class="md-nav__link">
     <span class="md-ellipsis">
-      História 1 — Cadastro de Produtos
+      História 1 — Cadastro de Produtos (Catálogo)
     </span>
   </a>
   
@@ -384,54 +412,72 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#historia-3-cadastro-de-estoque" class="md-nav__link">
+  <a href="#historia-3-cadastro-de-armazens" class="md-nav__link">
     <span class="md-ellipsis">
-      História 3 — Cadastro de Estoque
+      História 3 — Cadastro de Armazéns
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#historia-4-movimentacao-de-estoque" class="md-nav__link">
+  <a href="#historia-4-cadastro-de-itens-de-estoque" class="md-nav__link">
     <span class="md-ellipsis">
-      História 4 — Movimentação de Estoque
+      História 4 — Cadastro de Itens de Estoque
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#historia-5-consulta-de-estoque" class="md-nav__link">
+  <a href="#historia-5-movimentacao-de-estoque-entradas-e-saidas" class="md-nav__link">
     <span class="md-ellipsis">
-      História 5 — Consulta de Estoque
+      História 5 — Movimentação de Estoque (Entradas e Saídas)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#historia-6-relatorio-de-produtos-vencidos" class="md-nav__link">
+  <a href="#historia-6-consulta-e-monitoramento-de-estoque" class="md-nav__link">
     <span class="md-ellipsis">
-      História 6 — Relatório de Produtos Vencidos
+      História 6 — Consulta e Monitoramento de Estoque
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#historia-7-relatorio-de-movimentacoes" class="md-nav__link">
+  <a href="#historia-7-venda-de-produtos-com-rastreamento-de-lote-itens-de-estoque" class="md-nav__link">
     <span class="md-ellipsis">
-      História 7 — Relatório de Movimentações
+      História 7 — Venda de Produtos com Rastreamento de Lote (Itens de estoque)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#historia-8-registro-de-venda" class="md-nav__link">
+  <a href="#historia-8-relatorio-de-produtos-vencidos-e-proximos-do-vencimento" class="md-nav__link">
     <span class="md-ellipsis">
-      História 8 — Registro de Venda
+      História 8 — Relatório de Produtos Vencidos e Próximos do Vencimento
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#historia-9-relatorio-de-movimentacoes-de-estoque" class="md-nav__link">
+    <span class="md-ellipsis">
+      História 9 — Relatório de Movimentações de Estoque
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#historia-10-alerta-de-estoque-critico" class="md-nav__link">
+    <span class="md-ellipsis">
+      História 10 — Alerta de Estoque Crítico
     </span>
   </a>
   
@@ -442,7 +488,12 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#em-andamento" class="md-nav__link">
     <span class="md-ellipsis">
       🟡 Em andamento
@@ -450,8 +501,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#concluido" class="md-nav__link">
     <span class="md-ellipsis">
       🟢 Concluído
@@ -459,16 +510,33 @@
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
     </ul>
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../banco-de-dados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Projeto do banco de dados
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -520,9 +588,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#historia-1-cadastro-de-produtos" class="md-nav__link">
+  <a href="#historia-1-cadastro-de-produtos-catalogo" class="md-nav__link">
     <span class="md-ellipsis">
-      História 1 — Cadastro de Produtos
+      História 1 — Cadastro de Produtos (Catálogo)
     </span>
   </a>
   
@@ -538,54 +606,72 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#historia-3-cadastro-de-estoque" class="md-nav__link">
+  <a href="#historia-3-cadastro-de-armazens" class="md-nav__link">
     <span class="md-ellipsis">
-      História 3 — Cadastro de Estoque
+      História 3 — Cadastro de Armazéns
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#historia-4-movimentacao-de-estoque" class="md-nav__link">
+  <a href="#historia-4-cadastro-de-itens-de-estoque" class="md-nav__link">
     <span class="md-ellipsis">
-      História 4 — Movimentação de Estoque
+      História 4 — Cadastro de Itens de Estoque
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#historia-5-consulta-de-estoque" class="md-nav__link">
+  <a href="#historia-5-movimentacao-de-estoque-entradas-e-saidas" class="md-nav__link">
     <span class="md-ellipsis">
-      História 5 — Consulta de Estoque
+      História 5 — Movimentação de Estoque (Entradas e Saídas)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#historia-6-relatorio-de-produtos-vencidos" class="md-nav__link">
+  <a href="#historia-6-consulta-e-monitoramento-de-estoque" class="md-nav__link">
     <span class="md-ellipsis">
-      História 6 — Relatório de Produtos Vencidos
+      História 6 — Consulta e Monitoramento de Estoque
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#historia-7-relatorio-de-movimentacoes" class="md-nav__link">
+  <a href="#historia-7-venda-de-produtos-com-rastreamento-de-lote-itens-de-estoque" class="md-nav__link">
     <span class="md-ellipsis">
-      História 7 — Relatório de Movimentações
+      História 7 — Venda de Produtos com Rastreamento de Lote (Itens de estoque)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#historia-8-registro-de-venda" class="md-nav__link">
+  <a href="#historia-8-relatorio-de-produtos-vencidos-e-proximos-do-vencimento" class="md-nav__link">
     <span class="md-ellipsis">
-      História 8 — Registro de Venda
+      História 8 — Relatório de Produtos Vencidos e Próximos do Vencimento
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#historia-9-relatorio-de-movimentacoes-de-estoque" class="md-nav__link">
+    <span class="md-ellipsis">
+      História 9 — Relatório de Movimentações de Estoque
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#historia-10-alerta-de-estoque-critico" class="md-nav__link">
+    <span class="md-ellipsis">
+      História 10 — Alerta de Estoque Crítico
     </span>
   </a>
   
@@ -596,7 +682,12 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#em-andamento" class="md-nav__link">
     <span class="md-ellipsis">
       🟡 Em andamento
@@ -604,18 +695,13 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#concluido" class="md-nav__link">
     <span class="md-ellipsis">
       🟢 Concluído
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -634,104 +720,123 @@
                   
 
 
+  
+  
 
-<h1 id="product-backlog">Product Backlog</h1>
+
+<h1 id="product-backlog-sistema-remedio">Product Backlog — Sistema <strong>ReMed.io</strong></h1>
 <blockquote>
-<p>Este backlog contém as funcionalidades principais do sistema, com base nas histórias de usuários definidas a partir do <a href="../">Diagrama de Classe</a>.</p>
+<p>Este backlog contém as funcionalidades principais do sistema, baseadas no <a href="../">Diagrama de Classe</a> e nas regras de negócio do sistema ReMed.io.</p>
 </blockquote>
 <hr />
 <h2 id="board-kanban">Board Kanban</h2>
 <h3 id="historias">🔴 Histórias</h3>
-<h4 id="historia-1-cadastro-de-produtos">História 1 — Cadastro de Produtos</h4>
+<hr />
+<h4 id="historia-1-cadastro-de-produtos-catalogo">História 1 — Cadastro de Produtos (Catálogo)</h4>
 <p><strong>Como</strong> administrador<br />
-<strong>Quero</strong> cadastrar produtos no sistema<br />
-<strong>Para</strong> manter o controle de estoque</p>
-<p><strong>Critérios de aceitação:</strong></p>
+<strong>Quero</strong> cadastrar produtos no catálogo<br />
+<strong>Para</strong> organizar os tipos de produtos que a farmácia comercializa  </p>
+<p><strong>Critérios de aceitação:</strong> </p>
 <ul>
-<li>Deve ser possível cadastrar: código de barras, nome, preço, validade e fornecedor.</li>
-<li>Produto deve pertencer a uma subcategoria: Medicamento, Cosmético ou Suplemento.</li>
-<li>
-<p>Cada subclasse deve aceitar atributos específicos:</p>
-<ul>
-<li><strong>Medicamento</strong>: tarja, necessita receita, princípio ativo.</li>
-<li><strong>Cosmético</strong>: tipo de pele, faixa etária.</li>
-<li><strong>Suplemento Alimentar</strong>: sabor, tipo, restrições.</li>
-</ul>
-</li>
+<li>Deve ser possível cadastrar produtos base, vinculando-os a uma subcategoria: Medicamento, Cosmético ou Suplemento Alimentar.  </li>
+<li>Cada subclasse deve conter atributos específicos (ex.: tarja para medicamentos, tipo de pele para cosméticos, sabor para suplementos).  </li>
+<li>Este cadastro não contém informações operacionais como preço, validade ou quantidade — apenas dados descritivos.  </li>
 </ul>
 <hr />
 <h4 id="historia-2-cadastro-de-fornecedores">História 2 — Cadastro de Fornecedores</h4>
 <p><strong>Como</strong> administrador<br />
 <strong>Quero</strong> cadastrar fornecedores<br />
-<strong>Para</strong> associá-los aos produtos da farmácia</p>
-<p><strong>Critérios de aceitação:</strong></p>
+<strong>Para</strong> associá-los aos lotes de produtos adquiridos  </p>
+<p><strong>Critérios de aceitação:</strong>  </p>
 <ul>
-<li>Deve ser possível cadastrar nome, CNPJ e dados de contato.</li>
+<li>Cadastro de nome, CNPJ, telefone, e-mail e endereço.  </li>
+<li>Fornecedor pode ser associado a diferentes lotes (<code>ItemEstoque</code>).  </li>
 </ul>
 <hr />
-<h4 id="historia-3-cadastro-de-estoque">História 3 — Cadastro de Estoque</h4>
+<h4 id="historia-3-cadastro-de-armazens">História 3 — Cadastro de Armazéns</h4>
 <p><strong>Como</strong> administrador<br />
-<strong>Quero</strong> registrar dados de estoque<br />
-<strong>Para</strong> manter controle da localização e quantidade mínima</p>
-<p><strong>Critérios de aceitação:</strong></p>
+<strong>Quero</strong> cadastrar locais de armazenamento<br />
+<strong>Para</strong> organizar onde os produtos estão fisicamente ou logicamente armazenados  </p>
+<p><strong>Critérios de aceitação:</strong>  </p>
 <ul>
-<li>Deve ser possível definir local de armazenamento, quantidade mínima e quantidade atual.</li>
+<li>Cadastro do nome do armazém (ex.: Estoque Central, Balcão, Cosméticos).  </li>
+<li>Definição de quantidade mínima para cada produto nesse armazém (para alertas de estoque baixo).  </li>
 </ul>
 <hr />
-<h4 id="historia-4-movimentacao-de-estoque">História 4 — Movimentação de Estoque</h4>
+<h4 id="historia-4-cadastro-de-itens-de-estoque">História 4 — Cadastro de Itens de Estoque</h4>
 <p><strong>Como</strong> administrador<br />
-<strong>Quero</strong> registrar entradas e saídas de produtos<br />
-<strong>Para</strong> atualizar corretamente o estoque</p>
-<p><strong>Critérios de aceitação:</strong></p>
+<strong>Quero</strong> cadastrar itens de estoque<br />
+<strong>Para</strong> controlar validade, preço e fornecedor de cada entrada de produto  </p>
+<p><strong>Critérios de aceitação:</strong>  </p>
 <ul>
-<li>A movimentação deve ter data, tipo (entrada/saída), quantidade e produto.</li>
-<li>Deve atualizar automaticamente a quantidade atual no estoque.</li>
+<li>Cadastro de código de barras, preço de venda, data de validade, fornecedor e armazém.  </li>
+<li>Cada <code>ItemEstoque</code> está vinculado a um <code>ProdutoBase</code>.  </li>
 </ul>
 <hr />
-<h4 id="historia-5-consulta-de-estoque">História 5 — Consulta de Estoque</h4>
+<h4 id="historia-5-movimentacao-de-estoque-entradas-e-saidas">História 5 — Movimentação de Estoque (Entradas e Saídas)</h4>
 <p><strong>Como</strong> administrador<br />
-<strong>Quero</strong> consultar os dados do estoque<br />
-<strong>Para</strong> acompanhar a quantidade atual e validade dos produtos</p>
-<p><strong>Critérios de aceitação:</strong></p>
+<strong>Quero</strong> registrar entradas e saídas de estoque<br />
+<strong>Para</strong> manter o controle atualizado dos produtos disponíveis  </p>
+<p><strong>Critérios de aceitação:</strong>  </p>
 <ul>
-<li>Deve listar quantidade, localização e validade.</li>
-<li>Produtos vencidos ou com estoque abaixo do mínimo devem ser destacados.</li>
+<li>Movimentação deve conter: data, tipo (entrada ou saída), quantidade, e item de estoque (lote).  </li>
+<li>Deve atualizar automaticamente a quantidade no armazém.  </li>
+<li>Valida se há saldo suficiente para saídas.  </li>
 </ul>
 <hr />
-<h4 id="historia-6-relatorio-de-produtos-vencidos">História 6 — Relatório de Produtos Vencidos</h4>
+<h4 id="historia-6-consulta-e-monitoramento-de-estoque">História 6 — Consulta e Monitoramento de Estoque</h4>
 <p><strong>Como</strong> administrador<br />
-<strong>Quero</strong> gerar um relatório de produtos vencidos<br />
-<strong>Para</strong> tomar ações corretivas no estoque</p>
-<p><strong>Critérios de aceitação:</strong></p>
+<strong>Quero</strong> consultar o estoque atual<br />
+<strong>Para</strong> verificar quantidades, validade, localização e status dos produtos  </p>
+<p><strong>Critérios de aceitação:</strong>  </p>
 <ul>
-<li>Deve listar produtos cujo campo validade já passou.</li>
+<li>Listagem de quantidade atual, validade, armazém e fornecedor dos itens.  </li>
+<li>Destacar produtos vencidos ou com estoque abaixo do mínimo.  </li>
 </ul>
 <hr />
-<h4 id="historia-7-relatorio-de-movimentacoes">História 7 — Relatório de Movimentações</h4>
-<p><strong>Como</strong> administrador<br />
-<strong>Quero</strong> gerar relatórios de movimentações<br />
-<strong>Para</strong> visualizar o histórico de entradas e saídas</p>
-<p><strong>Critérios de aceitação:</strong></p>
-<ul>
-<li>Deve conter data, tipo, quantidade e produto.</li>
-</ul>
-<hr />
-<h4 id="historia-8-registro-de-venda">História 8 — Registro de Venda</h4>
+<h4 id="historia-7-venda-de-produtos-com-rastreamento-de-lote-itens-de-estoque">História 7 — Venda de Produtos com Rastreamento de Lote (Itens de estoque)</h4>
 <p><strong>Como</strong> atendente<br />
-<strong>Quero</strong> registrar vendas de produtos<br />
-<strong>Para</strong> realizar o controle financeiro</p>
-<p><strong>Critérios de aceitação:</strong></p>
+<strong>Quero</strong> realizar vendas selecionando itens específicos do estoque<br />
+<strong>Para</strong> garantir rastreabilidade dos lotes e validade  </p>
+<p><strong>Critérios de aceitação:</strong>  </p>
 <ul>
-<li>Deve ser possível selecionar um ou mais produtos.</li>
-<li>Deve calcular o valor total automaticamente.</li>
-<li>Deve gerar comprovante textual.</li>
+<li>A venda deve permitir selecionar quais lotes estão sendo vendidos.  </li>
+<li>Impede a venda de produtos vencidos.  </li>
+<li>Calcula automaticamente o valor total.  </li>
+<li>Gera comprovante textual da venda com detalhes dos itens (incluindo lote e validade).  </li>
 </ul>
 <hr />
-<h3 id="em-andamento">🟡 Em andamento</h3>
-<p><em>histórias que estão em desenvolvimento.</em></p>
+<h4 id="historia-8-relatorio-de-produtos-vencidos-e-proximos-do-vencimento">História 8 — Relatório de Produtos Vencidos e Próximos do Vencimento</h4>
+<p><strong>Como</strong> administrador<br />
+<strong>Quero</strong> gerar relatórios de produtos vencidos ou prestes a vencer<br />
+<strong>Para</strong> tomar decisões de descarte ou promoção dos produtos  </p>
+<p><strong>Critérios de aceitação:</strong> </p>
+<ul>
+<li>Listagem de produtos com validade expirada ou a vencer em até X dias (parâmetro configurável).  </li>
+</ul>
 <hr />
-<h3 id="concluido">🟢 Concluído</h3>
-<p><em>histórias que já foram finalizadas.</em></p>
+<h4 id="historia-9-relatorio-de-movimentacoes-de-estoque">História 9 — Relatório de Movimentações de Estoque</h4>
+<p><strong>Como</strong> administrador<br />
+<strong>Quero</strong> gerar um relatório de movimentações<br />
+<strong>Para</strong> acompanhar todo o histórico de entradas e saídas do estoque  </p>
+<p><strong>Critérios de aceitação:</strong></p>
+<ul>
+<li>Relatório deve incluir: data, tipo de movimentação, quantidade, item de estoque (produto + lote), e armazém.  </li>
+</ul>
+<hr />
+<h4 id="historia-10-alerta-de-estoque-critico">História 10 — Alerta de Estoque Crítico</h4>
+<p><strong>Como</strong> administrador<br />
+<strong>Quero</strong> receber alertas de estoque crítico<br />
+<strong>Para</strong> evitar falta de produtos essenciais  </p>
+<p><strong>Critérios de aceitação:</strong>  </p>
+<ul>
+<li>O sistema deve emitir alertas sempre que a quantidade de um item estiver igual ou abaixo da quantidade mínima definida para o armazém.  </li>
+</ul>
+<hr />
+<h2 id="em-andamento">🟡 Em andamento</h2>
+<p><em>Histórias que estão em desenvolvimento.</em>  </p>
+<h2 id="concluido">🟢 Concluído</h2>
+<p><em>Histórias que já foram finalizadas.</em>  </p>
 
 
 
