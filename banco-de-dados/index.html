@@ -11,10 +11,8 @@
       
       
       
-        <link rel="prev" href="../regra-negocio/">
+        <link rel="prev" href="../backlog/">
       
-      
-        <link rel="next" href="../banco-de-dados/">
       
       
       <link rel="icon" href="../assets/logo.svg">
@@ -22,7 +20,7 @@
     
     
       
-        <title>Product Backlog - ReMed.io</title>
+        <title>Projeto do banco de dados - ReMed.io</title>
       
     
     
@@ -76,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#product-backlog-sistema-remedio" class="md-skip">
+        <a href="#especificacao-do-banco-de-dados" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -111,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Product Backlog
+              Projeto do banco de dados
             
           </span>
         </div>
@@ -321,6 +319,28 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../backlog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Product Backlog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -338,7 +358,7 @@
   
   
   <span class="md-ellipsis">
-    Product Backlog
+    Projeto do banco de dados
     
   </span>
   
@@ -351,7 +371,7 @@
   
   
   <span class="md-ellipsis">
-    Product Backlog
+    Projeto do banco de dados
     
   </span>
   
@@ -374,110 +394,136 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#board-kanban" class="md-nav__link">
+  <a href="#diagrama-entidade-relacionamento-der" class="md-nav__link">
     <span class="md-ellipsis">
-      Board Kanban
+      Diagrama Entidade-Relacionamento (DER)
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Board Kanban">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dicionario-de-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dicionário de Dados
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dicionário de Dados">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#historias" class="md-nav__link">
+  <a href="#produtobase" class="md-nav__link">
     <span class="md-ellipsis">
-      🔴 Histórias
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🔴 Histórias">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#historia-1-cadastro-de-produtos-catalogo" class="md-nav__link">
-    <span class="md-ellipsis">
-      História 1 — Cadastro de Produtos (Catálogo)
+      ProdutoBase
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#historia-2-cadastro-de-fornecedores" class="md-nav__link">
+  <a href="#suplementoalimentar" class="md-nav__link">
     <span class="md-ellipsis">
-      História 2 — Cadastro de Fornecedores
+      SuplementoAlimentar
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#historia-3-cadastro-de-armazens" class="md-nav__link">
+  <a href="#medicamento" class="md-nav__link">
     <span class="md-ellipsis">
-      História 3 — Cadastro de Armazéns
+      Medicamento
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#historia-4-cadastro-de-itens-de-estoque" class="md-nav__link">
+  <a href="#cosmetico" class="md-nav__link">
     <span class="md-ellipsis">
-      História 4 — Cadastro de Itens de Estoque
+      Cosmetico
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#historia-5-movimentacao-de-estoque-entradas-e-saidas" class="md-nav__link">
+  <a href="#restricao" class="md-nav__link">
     <span class="md-ellipsis">
-      História 5 — Movimentação de Estoque (Entradas e Saídas)
+      Restricao
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#historia-6-consulta-e-monitoramento-de-estoque" class="md-nav__link">
+  <a href="#restricaosuplemento" class="md-nav__link">
     <span class="md-ellipsis">
-      História 6 — Consulta e Monitoramento de Estoque
+      RestricaoSuplemento
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#historia-7-venda-de-produtos-com-rastreamento-de-lote-itens-de-estoque" class="md-nav__link">
+  <a href="#fornecedor" class="md-nav__link">
     <span class="md-ellipsis">
-      História 7 — Venda de Produtos com Rastreamento de Lote (Itens de estoque)
+      Fornecedor
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#historia-8-relatorio-de-produtos-vencidos-e-proximos-do-vencimento" class="md-nav__link">
+  <a href="#itemestoque" class="md-nav__link">
     <span class="md-ellipsis">
-      História 8 — Relatório de Produtos Vencidos e Próximos do Vencimento
+      ItemEstoque
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#historia-9-relatorio-de-movimentacoes-de-estoque" class="md-nav__link">
+  <a href="#itemarmazenado" class="md-nav__link">
     <span class="md-ellipsis">
-      História 9 — Relatório de Movimentações de Estoque
+      ItemArmazenado
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#historia-10-alerta-de-estoque-critico" class="md-nav__link">
+  <a href="#armazem" class="md-nav__link">
     <span class="md-ellipsis">
-      História 10 — Alerta de Estoque Crítico
+      Armazem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#movimentoestoque" class="md-nav__link">
+    <span class="md-ellipsis">
+      MovimentoEstoque
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#venda" class="md-nav__link">
+    <span class="md-ellipsis">
+      Venda
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#itemvenda" class="md-nav__link">
+    <span class="md-ellipsis">
+      ItemVenda
     </span>
   </a>
   
@@ -487,25 +533,11 @@
     </nav>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
         <li class="md-nav__item">
-  <a href="#em-andamento" class="md-nav__link">
+  <a href="#5-regras-de-integridade" class="md-nav__link">
     <span class="md-ellipsis">
-      🟡 Em andamento
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#concluido" class="md-nav__link">
-    <span class="md-ellipsis">
-      🟢 Concluído
+      5. Regras de Integridade
     </span>
   </a>
   
@@ -515,28 +547,6 @@
   
 </nav>
       
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../banco-de-dados/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Projeto do banco de dados
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -568,110 +578,136 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#board-kanban" class="md-nav__link">
+  <a href="#diagrama-entidade-relacionamento-der" class="md-nav__link">
     <span class="md-ellipsis">
-      Board Kanban
+      Diagrama Entidade-Relacionamento (DER)
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Board Kanban">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dicionario-de-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dicionário de Dados
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dicionário de Dados">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#historias" class="md-nav__link">
+  <a href="#produtobase" class="md-nav__link">
     <span class="md-ellipsis">
-      🔴 Histórias
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🔴 Histórias">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#historia-1-cadastro-de-produtos-catalogo" class="md-nav__link">
-    <span class="md-ellipsis">
-      História 1 — Cadastro de Produtos (Catálogo)
+      ProdutoBase
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#historia-2-cadastro-de-fornecedores" class="md-nav__link">
+  <a href="#suplementoalimentar" class="md-nav__link">
     <span class="md-ellipsis">
-      História 2 — Cadastro de Fornecedores
+      SuplementoAlimentar
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#historia-3-cadastro-de-armazens" class="md-nav__link">
+  <a href="#medicamento" class="md-nav__link">
     <span class="md-ellipsis">
-      História 3 — Cadastro de Armazéns
+      Medicamento
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#historia-4-cadastro-de-itens-de-estoque" class="md-nav__link">
+  <a href="#cosmetico" class="md-nav__link">
     <span class="md-ellipsis">
-      História 4 — Cadastro de Itens de Estoque
+      Cosmetico
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#historia-5-movimentacao-de-estoque-entradas-e-saidas" class="md-nav__link">
+  <a href="#restricao" class="md-nav__link">
     <span class="md-ellipsis">
-      História 5 — Movimentação de Estoque (Entradas e Saídas)
+      Restricao
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#historia-6-consulta-e-monitoramento-de-estoque" class="md-nav__link">
+  <a href="#restricaosuplemento" class="md-nav__link">
     <span class="md-ellipsis">
-      História 6 — Consulta e Monitoramento de Estoque
+      RestricaoSuplemento
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#historia-7-venda-de-produtos-com-rastreamento-de-lote-itens-de-estoque" class="md-nav__link">
+  <a href="#fornecedor" class="md-nav__link">
     <span class="md-ellipsis">
-      História 7 — Venda de Produtos com Rastreamento de Lote (Itens de estoque)
+      Fornecedor
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#historia-8-relatorio-de-produtos-vencidos-e-proximos-do-vencimento" class="md-nav__link">
+  <a href="#itemestoque" class="md-nav__link">
     <span class="md-ellipsis">
-      História 8 — Relatório de Produtos Vencidos e Próximos do Vencimento
+      ItemEstoque
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#historia-9-relatorio-de-movimentacoes-de-estoque" class="md-nav__link">
+  <a href="#itemarmazenado" class="md-nav__link">
     <span class="md-ellipsis">
-      História 9 — Relatório de Movimentações de Estoque
+      ItemArmazenado
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#historia-10-alerta-de-estoque-critico" class="md-nav__link">
+  <a href="#armazem" class="md-nav__link">
     <span class="md-ellipsis">
-      História 10 — Alerta de Estoque Crítico
+      Armazem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#movimentoestoque" class="md-nav__link">
+    <span class="md-ellipsis">
+      MovimentoEstoque
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#venda" class="md-nav__link">
+    <span class="md-ellipsis">
+      Venda
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#itemvenda" class="md-nav__link">
+    <span class="md-ellipsis">
+      ItemVenda
     </span>
   </a>
   
@@ -681,25 +717,11 @@
     </nav>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
         <li class="md-nav__item">
-  <a href="#em-andamento" class="md-nav__link">
+  <a href="#5-regras-de-integridade" class="md-nav__link">
     <span class="md-ellipsis">
-      🟡 Em andamento
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#concluido" class="md-nav__link">
-    <span class="md-ellipsis">
-      🟢 Concluído
+      5. Regras de Integridade
     </span>
   </a>
   
@@ -724,119 +746,638 @@
   
 
 
-<h1 id="product-backlog-sistema-remedio">Product Backlog — Sistema <strong>ReMed.io</strong></h1>
-<blockquote>
-<p>Este backlog contém as funcionalidades principais do sistema, baseadas no <a href="../">Diagrama de Classe</a> e nas regras de negócio do sistema ReMed.io.</p>
-</blockquote>
+<h1 id="especificacao-do-banco-de-dados">Especificação do Banco de Dados</h1>
+<p>O banco de dados foi desenvolvido para gerenciar um sistema de estoque de produtos farmacêuticos e cosméticos, incluindo suplementos alimentares, medicamentos e cosméticos. Ele contempla controle de fornecedores, armazenamento, movimentação de estoque e vendas.</p>
 <hr />
-<h2 id="board-kanban">Board Kanban</h2>
-<h3 id="historias">🔴 Histórias</h3>
+<h2 id="diagrama-entidade-relacionamento-der">Diagrama Entidade-Relacionamento (DER)</h2>
+<p><img alt="Diagrama Físico do Banco" src="../assets/remedio-db.png" /></p>
 <hr />
-<h4 id="historia-1-cadastro-de-produtos-catalogo">História 1 — Cadastro de Produtos (Catálogo)</h4>
-<p><strong>Como</strong> administrador<br />
-<strong>Quero</strong> cadastrar produtos no catálogo<br />
-<strong>Para</strong> organizar os tipos de produtos que a farmácia comercializa  </p>
-<p><strong>Critérios de aceitação:</strong> </p>
+<h2 id="dicionario-de-dados">Dicionário de Dados</h2>
+<hr />
+<h3 id="produtobase"><strong>ProdutoBase</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>PK</th>
+<th>FK</th>
+<th>Nullable</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>produto_base_id</td>
+<td>SERIAL</td>
+<td>✔️</td>
+<td></td>
+<td>❌</td>
+<td>Identificador único do produto base</td>
+</tr>
+<tr>
+<td>nome</td>
+<td>CHAR(100)</td>
+<td></td>
+<td></td>
+<td>❌</td>
+<td>Nome do produto</td>
+</tr>
+<tr>
+<td>descricao</td>
+<td>CHAR(255)</td>
+<td></td>
+<td></td>
+<td>✔️</td>
+<td>Descrição opcional do produto</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="suplementoalimentar"><strong>SuplementoAlimentar</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>PK</th>
+<th>FK</th>
+<th>Nullable</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>produto_base_id</td>
+<td>INT</td>
+<td>✔️</td>
+<td>✔️</td>
+<td>❌</td>
+<td>Ref. ProdutoBase(produto_base_id)</td>
+</tr>
+<tr>
+<td>peso_volume</td>
+<td>CHAR(20)</td>
+<td></td>
+<td></td>
+<td>✔️</td>
+<td>Peso ou volume do suplemento</td>
+</tr>
+<tr>
+<td>sabor</td>
+<td>CHAR(50)</td>
+<td></td>
+<td></td>
+<td>✔️</td>
+<td>Sabor</td>
+</tr>
+<tr>
+<td>restricoes</td>
+<td>TEXT</td>
+<td></td>
+<td></td>
+<td>✔️</td>
+<td>Restrições alimentares gerais</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="medicamento"><strong>Medicamento</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>PK</th>
+<th>FK</th>
+<th>Nullable</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>produto_base_id</td>
+<td>INT</td>
+<td>✔️</td>
+<td>✔️</td>
+<td>❌</td>
+<td>Ref. ProdutoBase(produto_base_id)</td>
+</tr>
+<tr>
+<td>tarja</td>
+<td>CHAR(20)</td>
+<td></td>
+<td></td>
+<td>✔️</td>
+<td>Cor da tarja</td>
+</tr>
+<tr>
+<td>necessita_receita</td>
+<td>BOOLEAN</td>
+<td></td>
+<td></td>
+<td>✔️</td>
+<td>Indica se necessita receita</td>
+</tr>
+<tr>
+<td>dosagem</td>
+<td>CHAR(50)</td>
+<td></td>
+<td></td>
+<td>✔️</td>
+<td>Dosagem</td>
+</tr>
+<tr>
+<td>principio_ativo</td>
+<td>CHAR(100)</td>
+<td></td>
+<td></td>
+<td>✔️</td>
+<td>Princípio ativo</td>
+</tr>
+<tr>
+<td>forma_farmaceutica</td>
+<td>CHAR(50)</td>
+<td></td>
+<td></td>
+<td>✔️</td>
+<td>Forma farmacêutica</td>
+</tr>
+<tr>
+<td>via_administracao</td>
+<td>CHAR(50)</td>
+<td></td>
+<td></td>
+<td>✔️</td>
+<td>Via de administração</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="cosmetico"><strong>Cosmetico</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>PK</th>
+<th>FK</th>
+<th>Nullable</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>produto_base_id</td>
+<td>INT</td>
+<td>✔️</td>
+<td>✔️</td>
+<td>❌</td>
+<td>Ref. ProdutoBase(produto_base_id)</td>
+</tr>
+<tr>
+<td>tipo_produto</td>
+<td>CHAR(50)</td>
+<td></td>
+<td></td>
+<td>✔️</td>
+<td>Tipo do produto</td>
+</tr>
+<tr>
+<td>volume</td>
+<td>CHAR(20)</td>
+<td></td>
+<td></td>
+<td>✔️</td>
+<td>Volume</td>
+</tr>
+<tr>
+<td>faixa_etaria</td>
+<td>CHAR(20)</td>
+<td></td>
+<td></td>
+<td>✔️</td>
+<td>Faixa etária recomendada</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="restricao"><strong>Restricao</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>PK</th>
+<th>FK</th>
+<th>Nullable</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>restricao_id</td>
+<td>SERIAL</td>
+<td>✔️</td>
+<td></td>
+<td>❌</td>
+<td>ID único da restrição</td>
+</tr>
+<tr>
+<td>nome_restricao</td>
+<td>CHAR(50)</td>
+<td></td>
+<td></td>
+<td>❌</td>
+<td>Nome da restrição (Ex.: lactose, glúten)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="restricaosuplemento"><strong>RestricaoSuplemento</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>PK</th>
+<th>FK</th>
+<th>Nullable</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>produto_base_id</td>
+<td>INT</td>
+<td>✔️</td>
+<td>✔️</td>
+<td>❌</td>
+<td>Ref. SuplementoAlimentar(produto_base_id)</td>
+</tr>
+<tr>
+<td>restricao_id</td>
+<td>INT</td>
+<td>✔️</td>
+<td>✔️</td>
+<td>❌</td>
+<td>Ref. Restricao(restricao_id)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="fornecedor"><strong>Fornecedor</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>PK</th>
+<th>FK</th>
+<th>Nullable</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fornecedor_id</td>
+<td>SERIAL</td>
+<td>✔️</td>
+<td></td>
+<td>❌</td>
+<td>ID do fornecedor</td>
+</tr>
+<tr>
+<td>nome</td>
+<td>CHAR(100)</td>
+<td></td>
+<td></td>
+<td>❌</td>
+<td>Nome do fornecedor</td>
+</tr>
+<tr>
+<td>cnpj</td>
+<td>CHAR(20)</td>
+<td></td>
+<td></td>
+<td>❌</td>
+<td>CNPJ</td>
+</tr>
+<tr>
+<td>contato</td>
+<td>CHAR(100)</td>
+<td></td>
+<td></td>
+<td>✔️</td>
+<td>Contato (telefone, email, etc)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="itemestoque"><strong>ItemEstoque</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>PK</th>
+<th>FK</th>
+<th>Nullable</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>item_estoque_id</td>
+<td>SERIAL</td>
+<td>✔️</td>
+<td></td>
+<td>❌</td>
+<td>ID do item no estoque</td>
+</tr>
+<tr>
+<td>codigo_barras</td>
+<td>CHAR(50)</td>
+<td></td>
+<td></td>
+<td>❌</td>
+<td>Código de barras (único)</td>
+</tr>
+<tr>
+<td>fornecedor_id</td>
+<td>INT</td>
+<td></td>
+<td>✔️</td>
+<td>❌</td>
+<td>Ref. Fornecedor(fornecedor_id)</td>
+</tr>
+<tr>
+<td>produto_base_id</td>
+<td>INT</td>
+<td></td>
+<td>✔️</td>
+<td>❌</td>
+<td>Ref. ProdutoBase(produto_base_id)</td>
+</tr>
+<tr>
+<td>preco</td>
+<td>FLOAT</td>
+<td></td>
+<td></td>
+<td>✔️</td>
+<td>Preço</td>
+</tr>
+<tr>
+<td>validade</td>
+<td>DATE</td>
+<td></td>
+<td></td>
+<td>✔️</td>
+<td>Data de validade</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="itemarmazenado"><strong>ItemArmazenado</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>PK</th>
+<th>FK</th>
+<th>Nullable</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>item_armazenado_id</td>
+<td>SERIAL</td>
+<td>✔️</td>
+<td></td>
+<td>❌</td>
+<td>ID do item armazenado</td>
+</tr>
+<tr>
+<td>armazem_id</td>
+<td>INT</td>
+<td></td>
+<td>✔️</td>
+<td>❌</td>
+<td>Ref. Armazem(armazem_id)</td>
+</tr>
+<tr>
+<td>item_estoque_id</td>
+<td>INT</td>
+<td></td>
+<td>✔️</td>
+<td>❌</td>
+<td>Ref. ItemEstoque(item_estoque_id)</td>
+</tr>
+<tr>
+<td>quantidade</td>
+<td>INT</td>
+<td></td>
+<td></td>
+<td>❌</td>
+<td>Quantidade em estoque</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="armazem"><strong>Armazem</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>PK</th>
+<th>FK</th>
+<th>Nullable</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>armazem_id</td>
+<td>SERIAL</td>
+<td>✔️</td>
+<td></td>
+<td>❌</td>
+<td>ID do armazém</td>
+</tr>
+<tr>
+<td>local_armazenamento</td>
+<td>CHAR(100)</td>
+<td></td>
+<td></td>
+<td>❌</td>
+<td>Localização do armazém</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="movimentoestoque"><strong>MovimentoEstoque</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>PK</th>
+<th>FK</th>
+<th>Nullable</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>movimentacao_estoque_id</td>
+<td>SERIAL</td>
+<td>✔️</td>
+<td></td>
+<td>❌</td>
+<td>ID da movimentação</td>
+</tr>
+<tr>
+<td>item_estoque_id</td>
+<td>INT</td>
+<td></td>
+<td>✔️</td>
+<td>❌</td>
+<td>Ref. ItemEstoque(item_estoque_id)</td>
+</tr>
+<tr>
+<td>data</td>
+<td>TIMESTAMP</td>
+<td></td>
+<td></td>
+<td>❌</td>
+<td>Data da movimentação</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>CHAR(20)</td>
+<td></td>
+<td></td>
+<td>❌</td>
+<td>Tipo ('entrada' ou 'saida')</td>
+</tr>
+<tr>
+<td>quantidade</td>
+<td>INT</td>
+<td></td>
+<td></td>
+<td>❌</td>
+<td>Quantidade movimentada</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="venda"><strong>Venda</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>PK</th>
+<th>FK</th>
+<th>Nullable</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>venda_id</td>
+<td>SERIAL</td>
+<td>✔️</td>
+<td></td>
+<td>❌</td>
+<td>ID da venda</td>
+</tr>
+<tr>
+<td>data_venda</td>
+<td>TIMESTAMP</td>
+<td></td>
+<td></td>
+<td>❌</td>
+<td>Data da venda</td>
+</tr>
+<tr>
+<td>valor_total</td>
+<td>FLOAT</td>
+<td></td>
+<td></td>
+<td>❌</td>
+<td>Valor total da venda</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="itemvenda"><strong>ItemVenda</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>PK</th>
+<th>FK</th>
+<th>Nullable</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>item_venda_id</td>
+<td>SERIAL</td>
+<td>✔️</td>
+<td></td>
+<td>❌</td>
+<td>ID do item da venda</td>
+</tr>
+<tr>
+<td>venda_id</td>
+<td>INT</td>
+<td></td>
+<td>✔️</td>
+<td>❌</td>
+<td>Ref. Venda(venda_id)</td>
+</tr>
+<tr>
+<td>item_estoque_id</td>
+<td>INT</td>
+<td></td>
+<td>✔️</td>
+<td>❌</td>
+<td>Ref. ItemEstoque(item_estoque_id)</td>
+</tr>
+<tr>
+<td>quantidade</td>
+<td>INT</td>
+<td></td>
+<td></td>
+<td>❌</td>
+<td>Quantidade vendida</td>
+</tr>
+<tr>
+<td>preco_unitario</td>
+<td>FLOAT</td>
+<td></td>
+<td></td>
+<td>❌</td>
+<td>Preço unitário na venda</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-regras-de-integridade">5. Regras de Integridade</h2>
 <ul>
-<li>Deve ser possível cadastrar produtos base, vinculando-os a uma subcategoria: Medicamento, Cosmético ou Suplemento Alimentar.  </li>
-<li>Cada subclasse deve conter atributos específicos (ex.: tarja para medicamentos, tipo de pele para cosméticos, sabor para suplementos).  </li>
-<li>Este cadastro não contém informações operacionais como preço, validade ou quantidade — apenas dados descritivos.  </li>
+<li>Todas as chaves primárias são únicas e não nulas.</li>
+<li>Foreign Keys garantem integridade referencial entre as tabelas.</li>
+<li>Campos como <code>codigo_barras</code> e <code>nome_restricao</code> possuem restrições de unicidade.</li>
+<li>Movimentações possuem domínio restrito para o campo <code>tipo</code> ('entrada' ou 'saida').</li>
 </ul>
 <hr />
-<h4 id="historia-2-cadastro-de-fornecedores">História 2 — Cadastro de Fornecedores</h4>
-<p><strong>Como</strong> administrador<br />
-<strong>Quero</strong> cadastrar fornecedores<br />
-<strong>Para</strong> associá-los aos lotes de produtos adquiridos  </p>
-<p><strong>Critérios de aceitação:</strong>  </p>
-<ul>
-<li>Cadastro de nome, CNPJ, telefone, e-mail e endereço.  </li>
-<li>Fornecedor pode ser associado a diferentes lotes (<code>ItemEstoque</code>).  </li>
-</ul>
-<hr />
-<h4 id="historia-3-cadastro-de-armazens">História 3 — Cadastro de Armazéns</h4>
-<p><strong>Como</strong> administrador<br />
-<strong>Quero</strong> cadastrar locais de armazenamento<br />
-<strong>Para</strong> organizar onde os produtos estão fisicamente ou logicamente armazenados  </p>
-<p><strong>Critérios de aceitação:</strong>  </p>
-<ul>
-<li>Cadastro do nome do armazém (ex.: Estoque Central, Balcão, Cosméticos).  </li>
-<li>Definição de quantidade mínima para cada produto nesse armazém (para alertas de estoque baixo).  </li>
-</ul>
-<hr />
-<h4 id="historia-4-cadastro-de-itens-de-estoque">História 4 — Cadastro de Itens de Estoque</h4>
-<p><strong>Como</strong> administrador<br />
-<strong>Quero</strong> cadastrar itens de estoque<br />
-<strong>Para</strong> controlar validade, preço e fornecedor de cada entrada de produto  </p>
-<p><strong>Critérios de aceitação:</strong>  </p>
-<ul>
-<li>Cadastro de código de barras, preço de venda, data de validade, fornecedor e armazém.  </li>
-<li>Cada <code>ItemEstoque</code> está vinculado a um <code>ProdutoBase</code>.  </li>
-</ul>
-<hr />
-<h4 id="historia-5-movimentacao-de-estoque-entradas-e-saidas">História 5 — Movimentação de Estoque (Entradas e Saídas)</h4>
-<p><strong>Como</strong> administrador<br />
-<strong>Quero</strong> registrar entradas e saídas de estoque<br />
-<strong>Para</strong> manter o controle atualizado dos produtos disponíveis  </p>
-<p><strong>Critérios de aceitação:</strong>  </p>
-<ul>
-<li>Movimentação deve conter: data, tipo (entrada ou saída), quantidade, e item de estoque (lote).  </li>
-<li>Deve atualizar automaticamente a quantidade no armazém.  </li>
-<li>Valida se há saldo suficiente para saídas.  </li>
-</ul>
-<hr />
-<h4 id="historia-6-consulta-e-monitoramento-de-estoque">História 6 — Consulta e Monitoramento de Estoque</h4>
-<p><strong>Como</strong> administrador<br />
-<strong>Quero</strong> consultar o estoque atual<br />
-<strong>Para</strong> verificar quantidades, validade, localização e status dos produtos  </p>
-<p><strong>Critérios de aceitação:</strong>  </p>
-<ul>
-<li>Listagem de quantidade atual, validade, armazém e fornecedor dos itens.  </li>
-<li>Destacar produtos vencidos ou com estoque abaixo do mínimo.  </li>
-</ul>
-<hr />
-<h4 id="historia-7-venda-de-produtos-com-rastreamento-de-lote-itens-de-estoque">História 7 — Venda de Produtos com Rastreamento de Lote (Itens de estoque)</h4>
-<p><strong>Como</strong> atendente<br />
-<strong>Quero</strong> realizar vendas selecionando itens específicos do estoque<br />
-<strong>Para</strong> garantir rastreabilidade dos lotes e validade  </p>
-<p><strong>Critérios de aceitação:</strong>  </p>
-<ul>
-<li>A venda deve permitir selecionar quais lotes estão sendo vendidos.  </li>
-<li>Impede a venda de produtos vencidos.  </li>
-<li>Calcula automaticamente o valor total.  </li>
-<li>Gera comprovante textual da venda com detalhes dos itens (incluindo lote e validade).  </li>
-</ul>
-<hr />
-<h4 id="historia-8-relatorio-de-produtos-vencidos-e-proximos-do-vencimento">História 8 — Relatório de Produtos Vencidos e Próximos do Vencimento</h4>
-<p><strong>Como</strong> administrador<br />
-<strong>Quero</strong> gerar relatórios de produtos vencidos ou prestes a vencer<br />
-<strong>Para</strong> tomar decisões de descarte ou promoção dos produtos  </p>
-<p><strong>Critérios de aceitação:</strong> </p>
-<ul>
-<li>Listagem de produtos com validade expirada ou a vencer em até X dias (parâmetro configurável).  </li>
-</ul>
-<hr />
-<h4 id="historia-9-relatorio-de-movimentacoes-de-estoque">História 9 — Relatório de Movimentações de Estoque</h4>
-<p><strong>Como</strong> administrador<br />
-<strong>Quero</strong> gerar um relatório de movimentações<br />
-<strong>Para</strong> acompanhar todo o histórico de entradas e saídas do estoque  </p>
-<p><strong>Critérios de aceitação:</strong></p>
-<ul>
-<li>Relatório deve incluir: data, tipo de movimentação, quantidade, item de estoque (produto + lote), e armazém.  </li>
-</ul>
-<hr />
-<h4 id="historia-10-alerta-de-estoque-critico">História 10 — Alerta de Estoque Crítico</h4>
-<p><strong>Como</strong> administrador<br />
-<strong>Quero</strong> receber alertas de estoque crítico<br />
-<strong>Para</strong> evitar falta de produtos essenciais  </p>
-<p><strong>Critérios de aceitação:</strong>  </p>
-<ul>
-<li>O sistema deve emitir alertas sempre que a quantidade de um item estiver igual ou abaixo da quantidade mínima definida para o armazém.  </li>
-</ul>
-<hr />
-<h2 id="em-andamento">🟡 Em andamento</h2>
-<p><em>Histórias que estão em desenvolvimento.</em>  </p>
-<h2 id="concluido">🟢 Concluído</h2>
-<p><em>Histórias que já foram finalizadas.</em>  </p>
 
 
 
