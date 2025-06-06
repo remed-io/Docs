@@ -16,7 +16,6 @@ O banco de dados foi desenvolvido para gerenciar um sistema de estoque de produt
     </a>
 </p>
 
-
 ---
 
 ## Regras de Integridade

@@ -1,14 +1,12 @@
-# Product Backlog — Sistema **ReMed.io**
+# Product Backlog — Sistema **ReMed.io** (Atualizado)
 
-> Este backlog contém as funcionalidades principais do sistema, baseadas no [Diagrama de Classe](index.md) e nas regras de negócio do sistema ReMed.io.
+> Nesta seção é apresentado o Product Backlog do sistema ReMed.io, contendo as histórias de usuário planejadas para o desenvolvimento do sistema usando o Kanban.
 
 ---
 
 ## Board Kanban
 
 ### 🔴 Histórias
-
----
 
 #### História 1 — Cadastro de Produtos (Catálogo)
 **Como** administrador  
@@ -17,8 +15,8 @@
 
 **Critérios de aceitação:** 
 
-- Deve ser possível cadastrar produtos base, vinculando-os a uma subcategoria: Medicamento, Cosmético ou Suplemento Alimentar.  
-- Cada subclasse deve conter atributos específicos (ex.: tarja para medicamentos, tipo de pele para cosméticos, sabor para suplementos).  
+- Deve ser possível cadastrar produtos base, vinculando-os a uma subcategoria: Medicamento, Cuidado Pessoal ou Suplemento Alimentar.  
+- Cada subclasse deve conter atributos específicos (ex.: tarja para medicamentos, tipo de pele para cuidados pessoais, sabor para suplementos).  
 - Este cadastro não contém informações operacionais como preço, validade ou quantidade — apenas dados descritivos.  
 
 ---
@@ -42,7 +40,7 @@
 
 **Critérios de aceitação:**  
 
-- Cadastro do nome do armazém (ex.: Estoque Central, Balcão, Cosméticos).  
+- Cadastro do nome do armazém (ex.: Estoque Central, Balcão, Cuidados Pessoais).  
 - Definição de quantidade mínima para cada produto nesse armazém (para alertas de estoque baixo).  
 
 ---
@@ -60,20 +58,21 @@
 ---
 
 #### História 5 — Movimentação de Estoque (Entradas e Saídas)
-**Como** administrador  
+**Como** funcionário autenticado  
 **Quero** registrar entradas e saídas de estoque  
 **Para** manter o controle atualizado dos produtos disponíveis  
 
 **Critérios de aceitação:**  
 
-- Movimentação deve conter: data, tipo (entrada ou saída), quantidade, e item de estoque (lote).  
+- Movimentação deve conter: data, tipo (entrada ou saída), quantidade e item de estoque (lote).  
 - Deve atualizar automaticamente a quantidade no armazém.  
 - Valida se há saldo suficiente para saídas.  
+- Somente usuários autenticados com permissão de acesso podem realizar essa operação.  
 
 ---
 
 #### História 6 — Consulta e Monitoramento de Estoque
-**Como** administrador  
+**Como** funcionário autenticado  
 **Quero** consultar o estoque atual  
 **Para** verificar quantidades, validade, localização e status dos produtos  
 
@@ -81,25 +80,11 @@
 
 - Listagem de quantidade atual, validade, armazém e fornecedor dos itens.  
 - Destacar produtos vencidos ou com estoque abaixo do mínimo.  
+- Requer autenticação para acesso.  
 
 ---
 
-#### História 7 — Venda de Produtos com Rastreamento de Lote (Itens de estoque)
-
-**Como** atendente  
-**Quero** realizar vendas selecionando itens específicos do estoque  
-**Para** garantir rastreabilidade dos lotes e validade  
-
-**Critérios de aceitação:**  
-
-- A venda deve permitir selecionar quais lotes estão sendo vendidos.  
-- Impede a venda de produtos vencidos.  
-- Calcula automaticamente o valor total.  
-- Gera comprovante textual da venda com detalhes dos itens (incluindo lote e validade).  
-
----
-
-#### História 8 — Relatório de Produtos Vencidos e Próximos do Vencimento
+#### História 7 — Relatório de Produtos Vencidos e Próximos do Vencimento
 **Como** administrador  
 **Quero** gerar relatórios de produtos vencidos ou prestes a vencer  
 **Para** tomar decisões de descarte ou promoção dos produtos  
@@ -110,18 +95,18 @@
 
 ---
 
-#### História 9 — Relatório de Movimentações de Estoque
+#### História 8 — Relatório de Movimentações de Estoque
 **Como** administrador  
 **Quero** gerar um relatório de movimentações  
 **Para** acompanhar todo o histórico de entradas e saídas do estoque  
 
-**Critérios de aceitação:**
+**Critérios de aceitação:**  
 
 - Relatório deve incluir: data, tipo de movimentação, quantidade, item de estoque (produto + lote), e armazém.  
 
 ---
 
-#### História 10 — Alerta de Estoque Crítico
+#### História 9 — Alerta de Estoque Crítico
 **Como** administrador  
 **Quero** receber alertas de estoque crítico  
 **Para** evitar falta de produtos essenciais  
@@ -129,6 +114,19 @@
 **Critérios de aceitação:**  
 
 - O sistema deve emitir alertas sempre que a quantidade de um item estiver igual ou abaixo da quantidade mínima definida para o armazém.  
+
+---
+
+#### História 10 — Autenticação de Funcionários
+**Como** funcionário  
+**Quero** me autenticar no sistema  
+**Para** garantir acesso seguro às funcionalidades de estoque  
+
+**Critérios de aceitação:**  
+
+- O funcionário deve se autenticar utilizando e-mail e senha (armazenada como hash).  
+- Apenas usuários autenticados têm permissão para acessar ou modificar dados sensíveis.  
+- Dados do funcionário incluem nome, CPF, e-mail, cargo e data de contratação.  
 
 ---
 

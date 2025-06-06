@@ -1,5 +1,8 @@
-
 # Projeto Antigo - Farmácia da Márcia
+
+> Nesta seção é apresentado o projeto original que serviu como base para o desenvolvimento do ReMed.io, detalhando tudo sobre o projeto para a compreensão do sistema.
+
+---
 
 O Projeto **Farmácia da Márcia** foi desenvolvido inicialmente como parte da disciplina de **Orientação a Objetos** com o objetivo de criar um sistema simples de gerenciamento de estoque farmacêutico. A aplicação permite que o administrador **visualize, adicione, remova e edite** produtos disponíveis em sua farmácia por meio de uma interface
 
@@ -61,10 +64,11 @@ Além disso, o sistema utiliza o Maven para gerenciamento de dependências e o J
 
 > A estrutura de classes do sistema é apresentada abaixo
 
+<br>
 <p align="center">
-  <a href="https://raw.githubusercontent.com/remed-io/Docs/refs/heads/main/docs/assets/diagrama-antigo.png" target="_blank">
-    <img src="../assets/diagrama-antigo.png" alt="Diagrama de Classes - Farmacia da Marcia" width="500"/>
-</a>
+    <a href="https://raw.githubusercontent.com/remed-io/Docs/refs/heads/main/docs/assets/diagrama-antigo.png">
+        <img src="/../../assets/diagrama-antigo.png" alt="Diagrama Físico do Banco" width="600"/>
+    </a>
 </p>
 
 ### Principais Componentes
