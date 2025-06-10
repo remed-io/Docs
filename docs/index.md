@@ -1,5 +1,9 @@
 # Visão Geral - ReMed.io
 
+> Nesta seção é apresentada uma visão geral do sistema ReMed.io, ele funciona como ponto de partida para entender a estrutura e organização do projeto.
+
+---
+
 **ReMed.io** é um sistema de gerenciamento de estoque para farmácias, desenvolvido com o objetivo de digitalizar e automatizar os processos de controle de produtos, vendas e movimentações de estoque. Seu principal objetivo é fornecer uma plataforma eficiente para o gerenciamento de medicamentos, cosméticos e suplementos, garantindo rastreabilidade, segurança e precisão nas operações de entrada, saída e comercialização de itens farmacêuticos.
 
 ---
@@ -55,15 +59,23 @@ O projeto adota uma arquitetura **modular** baseada em repositórios independent
 
 ### Comunicação entre os Componentes
 
-- O **frontend** comunica-se com o **backend** via requisições HTTP usando `axios`, consumindo endpoints REST da API FastAPI.
-- O **backend** persiste e consulta dados no banco de dados **PostgreSQL** por meio do SQLAlchemy.
-- Todas as regras de negócio ficam encapsuladas em serviços no backend, mantendo o frontend simples e desacoplado.
+<p align="center">
+  <a href="https://raw.githubusercontent.com/remed-io/Docs/refs/heads/main/docs/assets/arquitetura.png" target="_blank">
+    <img src="assets/arquitetura.png" alt="Arquitetura do Sistema - ReMed.io" width="800"/>
+  </a>
+</p>
+<br>
+
+  - O **frontend** comunica-se com o **backend** via requisições HTTP usando **axios**, consumindo endpoints REST da API FastAPI.
+  - O **backend** persiste e consulta dados no banco de dados **PostgreSQL** por meio do SQLAlchemy.
+  - Todas as regras de negócio ficam encapsuladas em serviços no backend, mantendo o frontend simples e desacoplado.
+
 
 ---
 
 ## Diagrama de Classes
 
-> O diagrama de classes representa a estrutura orientada a objetos do sistema ReMed.io adaptado do [Diagrama de Classes do projeto antigo](projeto-antigo.md). 
+> O diagrama de classes representa a estrutura orientada a objetos do sistema ReMed.io adaptado do [Diagrama de Classes do projeto antigo](https://raw.githubusercontent.com/remed-io/Docs/refs/heads/main/docs/assets/diagrama-antigo.png). 
 
 <p align="center">
   <a href="https://raw.githubusercontent.com/remed-io/Docs/refs/heads/main/docs/assets/diagrama-novo.png" target="_blank">

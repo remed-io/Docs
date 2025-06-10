@@ -40,9 +40,14 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/remed-io
       name: GitHub da Organização
+
 nav:
   - Visão Geral: index.md
-  - Projeto Antigo: projeto-antigo.md
-  - Regras de Negócio: regra-negocio.md
-  - Product Backlog: backlog.md
-  - Projeto do banco de dados: banco-de-dados.md
+  - Documentação do Sistema:
+      - Regras de Negócio: documentacao-sistema/regra-negocio.md
+      - Banco de Dados:
+          - Visão Geral do Banco: documentacao-sistema/banco-de-dados/visao-geral-banco.md
+          - Dicionário de Dados: documentacao-sistema/banco-de-dados/dicionario.md
+      - Product Backlog: documentacao-sistema/backlog.md
+  - Histórico e Referências:
+      - Projeto Anterior: historico-referencia/projeto-antigo.md

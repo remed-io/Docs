@@ -1,23 +1,14 @@
-# Especificação do Banco de Dados
+# Dicionário de Dados
 
-O banco de dados foi desenvolvido para gerenciar um sistema de estoque de produtos farmacêuticos e cosméticos, incluindo suplementos alimentares, medicamentos e cosméticos. Ele contempla controle de fornecedores, armazenamento, movimentação de estoque e vendas.
-
----
-
-## Diagrama Entidade-Relacionamento (DER)
-![Diagrama Físico do Banco](./assets/remedio-db.png)
-
----
-
-## Dicionário de Dados
+> Nesta seção é apresentado o dicionário de dados do banco de dados do sistema ReMed.io, fornecendo detalhes sobre as tabelas, campos e relacionamentos utilizados no sistema.
 
 ---
 
 ### **ProdutoBase**
-| Campo            | Tipo         | PK | FK | Nullable | Descrição                                      |
+| Campo            | Tipo         | PK | FK | Nullable | Descrição                                       |
 |------------------|--------------|----|----|----------|-------------------------------------------------|
-| produto_base_id  | SERIAL       | ✔️ |    | ❌       | Identificador único do produto base             |
-| nome             | CHAR(100)    |    |    | ❌       | Nome do produto                                 |
+| produto_base_id  | SERIAL       | ✔️ |    | ❌       | Identificador único do produto base            |
+| nome             | CHAR(100)    |    |    | ❌       | Nome do produto                                |
 | descricao        | CHAR(255)    |    |    | ✔️       | Descrição opcional do produto                   |
 
 ---
@@ -45,13 +36,15 @@ O banco de dados foi desenvolvido para gerenciar um sistema de estoque de produt
 
 ---
 
-### **Cosmetico**
-| Campo            | Tipo         | PK | FK | Nullable | Descrição                                      |
-|------------------|--------------|----|----|----------|-------------------------------------------------|
-| produto_base_id  | INT          | ✔️ | ✔️ | ❌       | Ref. ProdutoBase(produto_base_id)               |
-| tipo_produto     | CHAR(50)     |    |    | ✔️       | Tipo do produto                                 |
-| volume           | CHAR(20)     |    |    | ✔️       | Volume                                          |
-| faixa_etaria     | CHAR(20)     |    |    | ✔️       | Faixa etária recomendada                        |
+### **CuidadoPessoal**
+| Campo             | Tipo         | PK | FK | Nullable | Descrição                                                         |
+|-------------------|--------------|----|----|----------|-------------------------------------------------------------------|
+|produto_base_id    | INT          | ✔️ |✔️ |  ❌     |  Ref. ProdutoBase(produto_base_id)                                 |
+|subcategoria_id    | INT          |    | ✔️ |  ❌     |  Ref. SubcategoriaCuidadoPessoal(subcategoria_id)                  |
+|formato            | CHAR(50)     |    |    |   ✔️     | Forma física do produto (ex: líquido, gel, sólido, spray, lenço)  |
+|quantidade         | CHAR(20)     |    |    |   ✔️     | Quantidade ou volume (ex: 200ml, 20 unidades)                     |
+|uso_recomendado    | CHAR(100)    |    |    |   ✔️     | Descrição curta de uso (ex: uso diário, noturno, infantil)        |
+|publico_alvo       | CHAR(50)     |    |    |   ✔️     | Público-alvo (ex: adulto, infantil, unissex, feminino)            |
 
 ---
 
@@ -68,6 +61,16 @@ O banco de dados foi desenvolvido para gerenciar um sistema de estoque de produt
 |------------------|--------------|----|----|----------|-------------------------------------------------|
 | produto_base_id  | INT          | ✔️ | ✔️ | ❌       | Ref. SuplementoAlimentar(produto_base_id)      |
 | restricao_id     | INT          | ✔️ | ✔️ | ❌       | Ref. Restricao(restricao_id)                   |
+
+---
+
+### **SubcategoriaCuidadoPessoal**
+
+| Campo            | Tipo         | PK | FK | Nullable | Descrição                                               |
+|------------------|--------------|----|----|----------|---------------------------------------------------------|
+|subcategoria_id   |  SERIAL      |✔️ |     |❌       |  Identificador único da subcategoria                    |
+|nome              |  CHAR(50)    |    |    | ❌       |  Nome da subcategoria (ex: Higiene, Beleza, Utilitário) |
+|descricao         |  CHAR(255)   |    |    | ✔️       |  Descrição opcional da subcategoria                     |
 
 ---
 
@@ -119,34 +122,22 @@ O banco de dados foi desenvolvido para gerenciar um sistema de estoque de produt
 | data                   | TIMESTAMP    |    |    | ❌       | Data da movimentação                           |
 | tipo                   | CHAR(20)     |    |    | ❌       | Tipo ('entrada' ou 'saida')                    |
 | quantidade             | INT          |    |    | ❌       | Quantidade movimentada                         |
+| cpf_comprador         | CHAR(11)     |    |    | ✔️       | CPF do comprador (se aplicável)                |
+| nome_comprador        | CHAR(100)    |    |    | ✔️       | Nome do comprador (se aplicável)               |
+| receita_medica_digital| TEXT         |    |    | ✔️       | Receita médica digital (se aplicável)          |
+| funcionario_id        | INT          |    | ✔️ | ❌       | Ref. Funcionario(funcionario_id)               |
 
 ---
 
-### **Venda**
-| Campo            | Tipo         | PK | FK | Nullable | Descrição                                      |
+### **Funcionario**
+| Campo            | Tipo         | PK | FK | Nullable | Descrição                                       |
 |------------------|--------------|----|----|----------|-------------------------------------------------|
-| venda_id         | SERIAL       | ✔️ |    | ❌       | ID da venda                                    |
-| data_venda       | TIMESTAMP    |    |    | ❌       | Data da venda                                  |
-| valor_total      | FLOAT        |    |    | ❌       | Valor total da venda                           |
-
----
-
-### **ItemVenda**
-| Campo             | Tipo         | PK | FK | Nullable | Descrição                                      |
-|-------------------|--------------|----|----|----------|-------------------------------------------------|
-| item_venda_id     | SERIAL       | ✔️ |    | ❌       | ID do item da venda                            |
-| venda_id          | INT          |    | ✔️ | ❌       | Ref. Venda(venda_id)                           |
-| item_estoque_id   | INT          |    | ✔️ | ❌       | Ref. ItemEstoque(item_estoque_id)              |
-| quantidade        | INT          |    |    | ❌       | Quantidade vendida                             |
-| preco_unitario    | FLOAT        |    |    | ❌       | Preço unitário na venda                        |
-
-
----
-
-## 5. Regras de Integridade
-- Todas as chaves primárias são únicas e não nulas.
-- Foreign Keys garantem integridade referencial entre as tabelas.
-- Campos como `codigo_barras` e `nome_restricao` possuem restrições de unicidade.
-- Movimentações possuem domínio restrito para o campo `tipo` ('entrada' ou 'saida').
+| funcionario_id   | SERIAL       | ✔️ |    | ❌      | Identificador único do funcionário              |
+| nome             | CHAR(100)    |    |    | ❌      | Nome completo do funcionário                    |
+| cpf              | CHAR(11)     |    |    | ❌      | CPF do funcionário (somente números)            |
+| email            | CHAR(100)    |    |    | ❌      | E-mail do funcionário                           |
+| senha_hash       | CHAR(255)    |    |    | ❌      | Senha do funcionário (armazenada com hash)      |
+| cargo            | CHAR(50)     |    |    | ❌      | Cargo ou função do funcionário                  |
+| data_contratacao | DATE         |    |    | ❌      | Data de contratação do funcionário              |
 
 ---
