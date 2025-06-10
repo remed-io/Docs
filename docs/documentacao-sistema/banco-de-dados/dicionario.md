@@ -122,6 +122,10 @@
 | data                   | TIMESTAMP    |    |    | ❌       | Data da movimentação                           |
 | tipo                   | CHAR(20)     |    |    | ❌       | Tipo ('entrada' ou 'saida')                    |
 | quantidade             | INT          |    |    | ❌       | Quantidade movimentada                         |
+| cpf_comprador         | CHAR(11)     |    |    | ✔️       | CPF do comprador (se aplicável)                |
+| nome_comprador        | CHAR(100)    |    |    | ✔️       | Nome do comprador (se aplicável)               |
+| receita_medica_digital| TEXT         |    |    | ✔️       | Receita médica digital (se aplicável)          |
+| funcionario_id        | INT          |    | ✔️ | ❌       | Ref. Funcionario(funcionario_id)               |
 
 ---
 

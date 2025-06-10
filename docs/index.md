@@ -75,7 +75,7 @@ O projeto adota uma arquitetura **modular** baseada em repositórios independent
 
 ## Diagrama de Classes
 
-> O diagrama de classes representa a estrutura orientada a objetos do sistema ReMed.io adaptado do [Diagrama de Classes do projeto antigo](projeto-antigo.md). 
+> O diagrama de classes representa a estrutura orientada a objetos do sistema ReMed.io adaptado do [Diagrama de Classes do projeto antigo](https://raw.githubusercontent.com/remed-io/Docs/refs/heads/main/docs/assets/diagrama-antigo.png). 
 
 <p align="center">
   <a href="https://raw.githubusercontent.com/remed-io/Docs/refs/heads/main/docs/assets/diagrama-novo.png" target="_blank">
