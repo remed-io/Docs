@@ -110,7 +110,7 @@
 | Campo            | Tipo         | PK | FK | Nullable | Descrição                                      |
 |------------------|--------------|----|----|----------|-------------------------------------------------|
 | armazem_id       | SERIAL       | ✔️ |    | ❌       | ID do armazém                                  |
-| local_armazenamento | CHAR(100) |    |    | ❌       | Localização do armazém                         |
+| local_armazem | CHAR(100) |    |    | ❌       | Localização do armazém                         |
 
 ---
 

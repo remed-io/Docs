@@ -4,7 +4,7 @@
 
 ---
 
-O banco de dados foi desenvolvido para gerenciar um sistema de estoque de produtos farmacêuticos e cosméticos, incluindo suplementos alimentares, medicamentos e cosméticos. Ele contempla controle de fornecedores, armazenamento, movimentação de estoque e vendas.
+O banco de dados foi desenvolvido para gerenciar um sistema de estoque de produtos farmacêuticos e cosméticos, incluindo suplementos alimentares, medicamentos e cosméticos. Ele contempla controle de fornecedores, armazem, movimentação de estoque e vendas.
 
 ---
 
