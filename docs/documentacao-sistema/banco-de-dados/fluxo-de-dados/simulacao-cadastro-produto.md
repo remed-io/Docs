@@ -1,152 +1,215 @@
-# Simulação de Cadastro de Produto no Item de Estoque
+# Simulação de Cadastro de um Produto no Estoque 
 
-> Esta seção apresenta um passo a passo prático para simular o cadastro de diferentes tipos de produtos (medicamento, cuidado pessoal e suplemento alimentar) no módulo de `item_estoque` do sistema ReMed.io, utilizando exemplos de requisições HTTP.
+> Esta seção apresenta um passo a passo prático para simular o cadastro de diferentes tipos de produtos (medicamento, cuidado pessoal e suplemento alimentar) no estoque do sistema ReMed.io, passando pela principal função do projeto.
 
+---
 
 ## Pré-requisitos
-- Backend rodando (FastAPI + Docker)
-- Banco de dados inicializado
-- Ferramenta de requisição HTTP (ex: Insomnia, Postman ou curl)
+
+Antes de iniciar, certifique-se de que:
+
+- O **container do backend** esteja em execução (`docker-compose up`).
+- O **banco de dados** esteja corretamente inicializado (`init.sql` já executado).
+- Você tenha acesso a uma **ferramenta de requisição HTTP** (como Insomnia, Postman ou Swagger UI).
+- A aplicação esteja acessível em `http://localhost:8000/docs` (interface Swagger).
 
 ---
 
-## 1. Cadastro de Fornecedor
-Antes de cadastrar qualquer produto, cadastre um fornecedor:
+## Etapas do Cadastro
 
-```http
-POST /fornecedor/
-Content-Type: application/json
+O processo é dividido nas seguintes etapas:
 
-{
-  "nome": "Fornecedor Exemplo",
-  "cnpj": "12345678000199",
-  "contato": "contato@exemplo.com"
-}
-```
+1. [Acesso ao Swagger e verificação da API](#1-acesso-ao-swagger-e-verificação-da-api)  
+2. [Cadastro de um Fornecedor](#2-cadastro-de-um-fornecedor)  
+3. [Cadastro de um Produto (Medicamento, Cuidado Pessoal ou Suplemento Alimentar)](#3-cadastro-de-um-produto)  
+4. [Cadastro de Item no Estoque](#4-cadastro-do-item-no-estoque)
 
 ---
 
-## 2. Cadastro de Medicamento
+## 1. Acesso ao Swagger e Verificação da API
 
-```http
-POST /medicamento/
-Content-Type: application/json
-
-{
-  "nome": "Dipirona",
-  "descricao": "Analgésico e antipirético",
-  "dosagem": "500mg",
-  "principio_ativo": "Dipirona Monoidratada",
-  "tarja": "Sem tarja",
-  "necessita_receita": false,
-  "forma_farmaceutica": "Comprimido",
-  "fabricante": "Farmaco S.A.",
-  "registro_anvisa": "1234567890"
-}
-```
+- Abra seu navegador e acesse: [`http://localhost:8000/docs`](http://localhost:8000/docs)
+- Você verá a interface interativa do **Swagger UI**, com todos os endpoints do sistema listados.
+- Expanda os endpoints que você utilizará: `/fornecedor/`, `/medicamento/`, `/cuidado-pessoal/`, `/suplemento-alimentar/`, `/item-estoque/`.
 
 ---
 
-## 3. Cadastro de Cuidado Pessoal
 
-Primeiro, cadastre uma subcategoria (se necessário):
+## 2. Cadastro de um Fornecedor
+> O fornecedor é uma entidade obrigatória para qualquer item de estoque.
 
-```http
-POST /subcategoria-cuidado-pessoal/
-Content-Type: application/json
+  - Acesse `POST /fornecedor/`
+  - Adicione os seguintes dados no corpo da requisição:
 
-{
-  "nome": "Higiene",
-  "descricao": "Produtos de higiene pessoal"
-}
-```
-
-Depois, cadastre o cuidado pessoal:
-
-```http
-POST /cuidado-pessoal/
-Content-Type: application/json
-
-{
-  "nome": "Sabonete Líquido",
-  "descricao": "Sabonete para mãos",
-  "subcategoria_id": 1,
-  "quantidade": "250ml",
-  "volume": "250ml",
-  "uso_recomendado": "Uso diário",
-  "publico_alvo": "Adulto",
-  "fabricante": "Higiene S.A."
-}
+```json
+    {
+      "nome": "Fornecedor Exemplo",
+      "cnpj": "12345678000199",
+      "contato": "contato@exemplo.com"
+    }
 ```
 
 ---
 
-## 4. Cadastro de Suplemento Alimentar
+## 3. Cadastro de Produtos
 
-```http
-POST /suplemento-alimentar/
-Content-Type: application/json
+Você pode cadastrar **apenas um tipo de produto por item de estoque**. Escolha um dos tipos abaixo:
+> ⚠️ Anote o `id` retornado do produto cadastrado, pois será necessário para o próximo passo.
 
-{
-  "nome": "Whey Protein",
-  "descricao": "Suplemento proteico",
-  "principio_ativo": "Proteína do soro do leite",
-  "sabor": "Baunilha",
-  "peso_volume": "900g",
-  "fabricante": "Suplementos Brasil",
-  "registro_anvisa": "9876543210"
-}
+### 3.1. Medicamento
+
+ - Acesse `POST /medicamento/`
+ - Exemplo de corpo da requisição:
+
+```json
+    {
+      "nome": "Dipirona",
+      "descricao": "Analgésico e antipirético",
+      "dosagem": "500mg",
+      "principio_ativo": "Dipirona Monoidratada",
+      "tarja": "Sem tarja",
+      "necessita_receita": false,
+      "forma_farmaceutica": "Comprimido",
+      "fabricante": "Farmaco S.A.",
+      "registro_anvisa": "1234567890"
+    }
 ```
+
+### 3.2 Cuidado Pessoal
+
+> Antes de cadastrar um cuidado pessoal, é necessário cadastrar uma subcategoria (se ainda não existir).
+
+ - Acesse `POST /cuidado-pessoal/`
+ - Exemplo de corpo da requisição:
+
+```json
+    {
+      "nome": "Sabonete Líquido",
+      "descricao": "Sabonete para mãos",
+      "subcategoria_id": 1,
+      "quantidade": "250ml",
+      "volume": "250ml",
+      "uso_recomendado": "Uso diário",
+      "publico_alvo": "Adulto",
+      "fabricante": "Higiene S.A."
+    }
+```
+
+**3.2.1 Cadastro de Subcategoria (opcional)**
+
+> Esta etapa é necessária apenas para produtos do tipo **Cuidado Pessoal**.
+
+- Acesse `POST /subcategoria-cuidado-pessoal/`
+- Exemplo de corpo da requisição:
+
+```json
+    {
+      "nome": "Higiene Pessoal",
+      "descricao": "Produtos para cuidados diários"
+    }
+```
+
+### 3.3 Suplemento Alimentar
+
+ - Acesse `POST /suplemento-alimentar/`
+ - Exemplo de corpo da requisição:
+
+```json
+    {
+      "nome": "Whey Protein",
+      "descricao": "Suplemento proteico",
+      "principio_ativo": "Proteína do soro do leite",
+      "sabor": "Baunilha",
+      "peso_volume": "900g",
+      "fabricante": "Suplementos Brasil",
+      "registro_anvisa": "9876543210"
+    }
+```
+
+**3.3.1 Cadastro de Restrição Alimentar (opcional para suplementos)**
+
+> Para suplementos alimentares, é possível cadastrar restrições alimentares e associá-las ao suplemento.
+
+- Acesse `POST /restricao-alimentar/`
+- Exemplo de corpo da requisição:
+
+```json
+    {
+      "nome": "Lactose"
+    }
+```
+
+Repita para cada restrição desejada (ex: Glúten, Açúcar, etc).
+
+**3.3.2 Associação de Restrição ao Suplemento Alimentar**
+
+- Acesse `POST /restricao-suplemento/`
+- Exemplo de corpo da requisição:
+
+```json
+    {
+      "suplemento_alimentar_id": 1,
+      "restricao_alimentar_id": 1,
+      "severidade": "grave",
+      "observacoes": "Contém traços de lactose."
+    }
+```
+
+> Repita para cada restrição que deseja associar ao suplemento.
 
 ---
 
-## 5. Cadastro de Item de Estoque
+## 4. Cadastro do Item no Estoque
 
-### 5.1. Medicamento
-```http
-POST /item-estoque/
-Content-Type: application/json
+Agora com o `fornecedor` e o `id` do produto cadastrados, você pode criar um item no estoque.
 
-{
-  "codigo_barras": "7891234567890",
-  "preco": 12.50,
-  "data_validade": "2026-12-31T00:00:00",
-  "fornecedor_id": 1,
-  "medicamento_id": 1
-}
+- Acesse `POST /item-estoque/`
+- Envie o JSON correspondente ao tipo de produto cadastrado. 
+
+**Exemplo para um medicamento:**
+```json
+    {
+      "codigo_barras": "7891234567890",
+      "preco": 12.50,
+      "data_validade": "2026-12-31T00:00:00",
+      "fornecedor_id": 1,
+      "medicamento_id": 1
+    }
 ```
 
-### 5.2. Cuidado Pessoal
-```http
-POST /item-estoque/
-Content-Type: application/json
+ **Exemplo para um cuidado pessoal:**
 
-{
-  "codigo_barras": "7899876543210",
-  "preco": 8.90,
-  "data_validade": "2025-10-15T00:00:00",
-  "fornecedor_id": 1,
-  "cuidado_pessoal_id": 1
-}
+```json
+    {
+      "codigo_barras": "7891234567891",
+      "preco": 8.99,
+      "data_validade": "2025-06-30T00:00:00",
+      "fornecedor_id": 1,
+      "cuidado_pessoal_id": 1
+    }
 ```
 
-### 5.3. Suplemento Alimentar
-```http
-POST /item-estoque/
-Content-Type: application/json
+ **Exemplo para um suplemento alimentar:**
 
-{
-  "codigo_barras": "7891112223334",
-  "preco": 99.90,
-  "data_validade": "2027-03-01T00:00:00",
-  "fornecedor_id": 1,
-  "suplemento_alimentar_id": 1
-}
+```json
+    {
+      "codigo_barras": "7891234567892",
+      "preco": 45.00,
+      "data_validade": "2027-03-15T00:00:00",
+      "fornecedor_id": 1,
+      "suplemento_alimentar_id": 1
+    }
 ```
-
 ---
 
-## Observações
-- Os IDs utilizados nos exemplos (ex: `fornecedor_id`, `medicamento_id`, etc.) devem ser ajustados conforme o retorno das requisições de cadastro.
-- Certifique-se de cadastrar apenas **um tipo de produto** por item de estoque.
-- O campo `data_validade` deve estar no formato ISO 8601.
+## Observações Finais
+
+ - Os `ids` nos exemplos são ilustrativos. Use os valores reais retornados pelas requisições anteriores.
+
+ - Apenas **um tipo de produto** deve estar presente no item-estoque.
+
+ - Os campos devem estar em conformidade com os tipos definidos no Swagger.
+
+ - O campo `data_validade` deve estar no **formato ISO 8601.**
+
+ - Caso algum erro ocorra, verifique se os IDs referenciados realmente existem.
