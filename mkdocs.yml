@@ -48,6 +48,9 @@ nav:
       - Banco de Dados:
           - Visão Geral do Banco: documentacao-sistema/banco-de-dados/visao-geral-banco.md
           - Dicionário de Dados: documentacao-sistema/banco-de-dados/dicionario.md
+          - Fluxo de Dados:
+              - Fluxo Completo: documentacao-sistema/banco-de-dados/fluxo-de-dados/fluxo-completo.md
+              - Simulação de Cadastro de Produto: documentacao-sistema/banco-de-dados/fluxo-de-dados/simulacao-cadastro-produto.md
       - Product Backlog: documentacao-sistema/backlog.md
   - Histórico e Referências:
       - Projeto Anterior: historico-referencia/projeto-antigo.md

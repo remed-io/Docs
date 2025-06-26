@@ -35,7 +35,7 @@
 
 #### História 3 — Cadastro de Armazéns
 **Como** administrador  
-**Quero** cadastrar locais de armazenamento  
+**Quero** cadastrar locais de armazem  
 **Para** organizar onde os produtos estão fisicamente ou logicamente armazenados  
 
 **Critérios de aceitação:**  

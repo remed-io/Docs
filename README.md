@@ -1,55 +1,68 @@
-# remed.io 💊
+# ReMed.io 🧪
 
-O projeto consiste na reestruturação do projeto **[Farmácia da Marcia](https://github.com/acamposs/Projeto_oo1)** desenvolvido na disciplina Orientação a Objetos cursada no terceiro semestre do curso. O objetivo é melhorar o sistema aplicando conceitos adquiridos posteriormente no curso. 
+Sistema completo de gerenciamento de estoque para farmácias, com controle de medicamentos, suplementos alimentares, produtos de cuidado pessoal, fornecedores, armazéns e rastreabilidade de movimentações.
 
-O projeto consiste em um sistema de controle de estoque para farmácias, com foco na gestão eficiente de medicamentos e produtos farmacêuticos. 
+---
 
-## Estrutura do Projeto
+## Visão Geral do Projeto
 
-Este projeto está dividido em três partes principais:
+O projeto **ReMed.io** é composto por três repositórios principais:
 
-- **[Frontend](https://github.com/remed-io/Frontend)**: Interface do usuário, desenvolvida com React.
-- **[Backend-estoque](https://github.com/remed-io/Backend-estoque)**: A API que gerencia o estoque, construída com FastAPI.
-- **[Docs](https://github.com/remed-io/Docs)**: Toda a documentação do projeto, incluindo diagramas, Product Backlog, e informações do desenvolvimento.
+- **Backend-estoque** ([link](https://github.com/remed-io/Backend-estoque)) — API RESTful desenvolvida em FastAPI e PostgreSQL, responsável por toda a lógica de negócio, persistência e regras de estoque.
+- **Frontend** ([link](https://github.com/remed-io/Frontend)) — Aplicação web em React e TypeScript, interface amigável para interação com o sistema.
+- **Docs** (este repositório) — Documentação técnica, diagramas, backlog, regras de negócio e guias de uso/teste.
 
-## Product Backlog
+---
 
-Acompanhe as tarefas e histórias de usuário no nosso [Product Backlog](link_para_o_backlog).
+## Tecnologias Utilizadas
 
-## Como Rodar o Projeto
+- **Backend:** Python, FastAPI, SQLAlchemy, PostgreSQL, Docker
+- **Frontend:** React, TypeScript, TailwindCSS
+- **Documentação:** MkDocs, Markdown
 
-### Backend
+---
 
-1. Clone o repositório do **Backend-estoque**.
-2. Navegue até a pasta do backend e execute:
+## Arquitetura Geral
 
-    ```bash
-    docker-compose up
-    ```
+O sistema segue uma arquitetura modular, desacoplando backend, frontend e documentação. A comunicação entre frontend e backend é feita via API REST. O backend utiliza banco relacional PostgreSQL e é facilmente orquestrado via Docker Compose.
 
-3. O servidor estará rodando no `http://localhost:8000`.
+---
 
-### Frontend
+## Como rodar o projeto
 
-1. Clone o repositório do **Frontend**.
-2. Navegue até a pasta do frontend e execute:
+Consulte os READMEs de cada repositório para instruções detalhadas:
+- [Backend-estoque](https://github.com/remed-io/Backend-estoque)
+- [Frontend](https://github.com/remed-io/Frontend)
+- [Docs](https://github.com/remed-io/Docs)
 
-    ```bash
-    npm install
-    npm run dev
-    ```
+---
 
-3. O frontend estará acessível em `http://localhost:3000`.
+## Sobre este repositório (Docs)
 
-## Estrutura de Pastas
+Aqui você encontra:
+- Visão geral do sistema
+- Product Backlog (Kanban, histórias de usuário)
+- Dicionário de dados
+- Diagramas (ER, classes, arquitetura)
+- Regras de negócio
+- Guias de uso e testes
+- Histórico do projeto original
 
-- **backend-estoque**:
-  - `models/`: Classes Pydantic.
-  - `schemas/`: DTOs.
-  - `services/`: Regras de negócio.
-  - `routes/`: Endpoints da API.
-  - `tests/`: Testes unitários com pytest.
+### Como visualizar a documentação
 
-- **frontend**:
-  - React App com estrutura básica e comunicação com o backend.
+1. Instale o MkDocs:
+   ```bash
+   pip install mkdocs
+   ```
+2. Inicie o servidor de documentação:
+   ```bash
+   mkdocs serve
+   ```
+   Acesse em [http://localhost:8000](http://localhost:8000).
+
+---
+
+## Licença
+
+MIT
 

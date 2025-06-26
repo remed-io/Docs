@@ -4,7 +4,20 @@
 
 ---
 
-O banco de dados foi desenvolvido para gerenciar um sistema de estoque de produtos farmacêuticos e cosméticos, incluindo suplementos alimentares, medicamentos e cosméticos. Ele contempla controle de fornecedores, armazenamento, movimentação de estoque e vendas.
+As tabelas principais incluem:
+
+- `armazem`: armazena informações de locais fisicos de armazenamento.  
+- `fornecedor`: armazena informações dos fornecedores.
+- `funcionario`: contém dados dos funcionários que gerenciam o estoque.
+- `item_armazenado`: relaciona itens do estoque com os locais de armazenamento.
+- `movimentacao_estoque`: registra entradas e saídas de produtos.
+- `medicamento`: contém dados dos medicamentos.
+- `cuidado_pessoal`: para produtos de cuidado pessoal.
+- `subcategoria_cuidado_pessoal`: relaciona produtos de cuidado pessoal com suas subcategorias.
+- `suplemento_alimentar`: para suplementos alimentares.
+- `restricao_alimentar`: armazena infoemações sobre restrições alimentares.
+- `restricao_suplemento`: relaciona suplementos com restrições alimentares.
+- `item_estoque`: relaciona produtos com informações fundamentais de estoque.
 
 ---
 
@@ -19,9 +32,7 @@ O banco de dados foi desenvolvido para gerenciar um sistema de estoque de produt
 ---
 
 ## Regras de Integridade
-- Todas as chaves primárias são únicas e não nulas.
-- Foreign Keys garantem integridade referencial entre as tabelas.
-- Campos como `codigo_barras` e `nome_restricao` possuem restrições de unicidade.
-- Movimentações possuem domínio restrito para o campo `tipo` ('entrada' ou 'saida').
-
----
+- **Chaves Primárias**: Todas as tabelas possuem uma chave primária única.
+- **Chaves Estrangeiras**: As relações entre tabelas são estabelecidas por chaves estrangeiras, garantindo integridade referencial.
+- **Validações de Dados**: O backend valida os dados antes de inseri-los no banco, garantindo que atendam aos requisitos do modelo.
+- **Relação de Medicamento, Cuidado Pessoal e Suplementos com Item Estoque**: Cada produto deve estar vinculado a um item de estoque, e cada item de estoque deve estar vinculado a um produto.

@@ -39,9 +39,9 @@
 `ItemEstoque`: *"Caixa de Dipirona 500mg, validade 05/2026, preço R$10,00, fornecedor Farmac Distribuidora"*
 
 
-### **Gestão de Estoque e Armazenamento**
+### **Gestão de Estoque e Armazem**
 
-- A classe **Armazem** representa os locais de armazenamento, que podem ser físicos (ex.: estoque central, balcão) ou lógicos (ex.: estoque de cosméticos).
+- A classe **Armazem** representa os locais de armazem, que podem ser físicos (ex.: estoque central, balcão) ou lógicos (ex.: estoque de cosméticos).
 - Cada armazém possui uma lista de **`ItemEstoque`** e controla:
 
     - Quantidade atual
