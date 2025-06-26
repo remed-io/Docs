@@ -489,6 +489,102 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_3" id="__nav_2_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Fluxo de Dados
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Fluxo de Dados
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fluxo-de-dados/fluxo-completo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fluxo Completo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fluxo-de-dados/simulacao-cadastro-produto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Simulação de Cadastro de Produto
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -670,7 +766,21 @@
 <p>Nesta seção é apresentada a especificação detalhada do banco de dados do sistema ReMed.io.</p>
 </blockquote>
 <hr />
-<p>O banco de dados foi desenvolvido para gerenciar um sistema de estoque de produtos farmacêuticos e cosméticos, incluindo suplementos alimentares, medicamentos e cosméticos. Ele contempla controle de fornecedores, armazenamento, movimentação de estoque e vendas.</p>
+<p>As tabelas principais incluem:</p>
+<ul>
+<li><code>armazem</code>: armazena informações de locais fisicos de armazenamento.  </li>
+<li><code>fornecedor</code>: armazena informações dos fornecedores.</li>
+<li><code>funcionario</code>: contém dados dos funcionários que gerenciam o estoque.</li>
+<li><code>item_armazenado</code>: relaciona itens do estoque com os locais de armazenamento.</li>
+<li><code>movimentacao_estoque</code>: registra entradas e saídas de produtos.</li>
+<li><code>medicamento</code>: contém dados dos medicamentos.</li>
+<li><code>cuidado_pessoal</code>: para produtos de cuidado pessoal.</li>
+<li><code>subcategoria_cuidado_pessoal</code>: relaciona produtos de cuidado pessoal com suas subcategorias.</li>
+<li><code>suplemento_alimentar</code>: para suplementos alimentares.</li>
+<li><code>restricao_alimentar</code>: armazena infoemações sobre restrições alimentares.</li>
+<li><code>restricao_suplemento</code>: relaciona suplementos com restrições alimentares.</li>
+<li><code>item_estoque</code>: relaciona produtos com informações fundamentais de estoque.</li>
+</ul>
 <hr />
 <h2 id="diagrama-entidade-relacionamento-der">Diagrama Entidade-Relacionamento (DER)</h2>
 <p><br></p>
@@ -683,12 +793,11 @@
 <hr />
 <h2 id="regras-de-integridade">Regras de Integridade</h2>
 <ul>
-<li>Todas as chaves primárias são únicas e não nulas.</li>
-<li>Foreign Keys garantem integridade referencial entre as tabelas.</li>
-<li>Campos como <code>codigo_barras</code> e <code>nome_restricao</code> possuem restrições de unicidade.</li>
-<li>Movimentações possuem domínio restrito para o campo <code>tipo</code> ('entrada' ou 'saida').</li>
+<li><strong>Chaves Primárias</strong>: Todas as tabelas possuem uma chave primária única.</li>
+<li><strong>Chaves Estrangeiras</strong>: As relações entre tabelas são estabelecidas por chaves estrangeiras, garantindo integridade referencial.</li>
+<li><strong>Validações de Dados</strong>: O backend valida os dados antes de inseri-los no banco, garantindo que atendam aos requisitos do modelo.</li>
+<li><strong>Relação de Medicamento, Cuidado Pessoal e Suplementos com Item Estoque</strong>: Cada produto deve estar vinculado a um item de estoque, e cada item de estoque deve estar vinculado a um produto.</li>
 </ul>
-<hr />
 
 
 
