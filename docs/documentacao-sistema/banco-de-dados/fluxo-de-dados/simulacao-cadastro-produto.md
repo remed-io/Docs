@@ -171,6 +171,7 @@ Agora com o `fornecedor` e o `id` do produto cadastrados, você pode criar um it
     {
       "codigo_barras": "7891234567890",
       "preco": 12.50,
+      "lote": "Lote123",
       "data_validade": "2026-12-31T00:00:00",
       "fornecedor_id": 1,
       "medicamento_id": 1
@@ -183,6 +184,7 @@ Agora com o `fornecedor` e o `id` do produto cadastrados, você pode criar um it
     {
       "codigo_barras": "7891234567891",
       "preco": 8.99,
+      "lote": "Lote123",
       "data_validade": "2025-06-30T00:00:00",
       "fornecedor_id": 1,
       "cuidado_pessoal_id": 1
@@ -196,6 +198,7 @@ Agora com o `fornecedor` e o `id` do produto cadastrados, você pode criar um it
       "codigo_barras": "7891234567892",
       "preco": 45.00,
       "data_validade": "2027-03-15T00:00:00",
+      "lote": "Lote123",
       "fornecedor_id": 1,
       "suplemento_alimentar_id": 1
     }
