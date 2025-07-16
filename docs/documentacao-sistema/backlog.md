@@ -139,6 +139,6 @@
 | H5 — Movimentação Estoque     | ✅ Completo    | CRUD + lógica atualizar estoque + auth obrigatória |
 | H6 — Consulta Estoque         | ✅ Completo    | Endpoints implementados com filtros avançados + auth |
 | H7 — Relatório Vencidos       | ✅ Completo    | Relatórios completos + exportação CSV + filtros |
-| H8 — Relatório Movimentações  | ✅ Completo             | Endpoint não implementado |
-| H9 — Alerta Estoque Crítico   | ❌            | Lógica de alertas não implementada |
-| H10 — Autenticação            | ✅ Completo    | JWT implementado + proteção rotas sensíveis |
+| H8 — Relatório Movimentações  | ✅ Completo    | Relatórios completos + exportação CSV + filtros |
+| H9 — Alerta Estoque Crítico   | ✅ Completo    | Sistema completo de alertas + dashboard + configurações |
+| H10 — Autenticação            | ✅ Simplificado | Login básico implementado (sem JWT) |
