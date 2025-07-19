@@ -1,12 +1,10 @@
-# Product Backlog — Sistema **ReMed.io** (Atualizado)
+# Product Backlog — Sistema ReMed.io
 
 > Nesta seção é apresentado o Product Backlog do sistema ReMed.io, contendo as histórias de usuário planejadas para o desenvolvimento do sistema usando o Kanban.
 
 ---
 
-## Board Kanban
-
-### 🔴 Histórias
+## Histórias
 
 #### História 1 — Cadastro de Produtos (Catálogo)
 **Como** administrador  
@@ -130,8 +128,17 @@
 
 ---
 
-## 🟡 Em andamento  
-*Histórias que estão em desenvolvimento.*  
+## Board Kanban
 
-## 🟢 Concluído  
-*Histórias que já foram finalizadas.*  
+| História                      | Implementada  | Observações                         |
+| ----------------------------- | ------------- | ----------------------------------- |
+| H1 — Produto Base             | ✅ Completo    | CRUDs completos para Medicamento, CuidadoPessoal, SuplementoAlimentar |
+| H2 — Fornecedor               | ✅ Completo    | CRUD completo com validação CNPJ |
+| H3 — Armazéns                 | ✅ Completo    | CRUD completo + campo quantidade_minima implementado |
+| H4 — Itens de Estoque         | ✅ Completo    | CRUD completo com relacionamentos |
+| H5 — Movimentação Estoque     | ✅ Completo    | CRUD + lógica atualizar estoque + auth obrigatória |
+| H6 — Consulta Estoque         | ✅ Completo    | Endpoints implementados com filtros avançados + auth |
+| H7 — Relatório Vencidos       | ✅ Completo    | Relatórios completos + exportação CSV + filtros |
+| H8 — Relatório Movimentações  | ✅ Completo    | Relatórios completos + exportação CSV + filtros |
+| H9 — Alerta Estoque Crítico   | ✅ Completo    | Sistema completo de alertas + dashboard + configurações |
+| H10 — Autenticação            | ✅ Simplificado | Login básico implementado (sem JWT) |
