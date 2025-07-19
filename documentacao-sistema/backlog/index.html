@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#product-backlog-sistema-remedio-atualizado" class="md-skip">
+        <a href="#product-backlog-sistema-remedio" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -590,23 +590,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#board-kanban" class="md-nav__link">
-    <span class="md-ellipsis">
-      Board Kanban
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Board Kanban">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#historias" class="md-nav__link">
     <span class="md-ellipsis">
-      🔴 Histórias
+      Histórias
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🔴 Histórias">
+    <nav class="md-nav" aria-label="Histórias">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -703,25 +693,11 @@
     </nav>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
         <li class="md-nav__item">
-  <a href="#em-andamento" class="md-nav__link">
+  <a href="#board-kanban" class="md-nav__link">
     <span class="md-ellipsis">
-      🟡 Em andamento
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#concluido" class="md-nav__link">
-    <span class="md-ellipsis">
-      🟢 Concluído
+      Board Kanban
     </span>
   </a>
   
@@ -845,23 +821,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#board-kanban" class="md-nav__link">
-    <span class="md-ellipsis">
-      Board Kanban
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Board Kanban">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#historias" class="md-nav__link">
     <span class="md-ellipsis">
-      🔴 Histórias
+      Histórias
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🔴 Histórias">
+    <nav class="md-nav" aria-label="Histórias">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -958,25 +924,11 @@
     </nav>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
         <li class="md-nav__item">
-  <a href="#em-andamento" class="md-nav__link">
+  <a href="#board-kanban" class="md-nav__link">
     <span class="md-ellipsis">
-      🟡 Em andamento
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#concluido" class="md-nav__link">
-    <span class="md-ellipsis">
-      🟢 Concluído
+      Board Kanban
     </span>
   </a>
   
@@ -1001,13 +953,12 @@
   
 
 
-<h1 id="product-backlog-sistema-remedio-atualizado">Product Backlog — Sistema <strong>ReMed.io</strong> (Atualizado)</h1>
+<h1 id="product-backlog-sistema-remedio">Product Backlog — Sistema ReMed.io</h1>
 <blockquote>
 <p>Nesta seção é apresentado o Product Backlog do sistema ReMed.io, contendo as histórias de usuário planejadas para o desenvolvimento do sistema usando o Kanban.</p>
 </blockquote>
 <hr />
-<h2 id="board-kanban">Board Kanban</h2>
-<h3 id="historias">🔴 Histórias</h3>
+<h2 id="historias">Histórias</h2>
 <h4 id="historia-1-cadastro-de-produtos-catalogo">História 1 — Cadastro de Produtos (Catálogo)</h4>
 <p><strong>Como</strong> administrador<br />
 <strong>Quero</strong> cadastrar produtos no catálogo<br />
@@ -1110,10 +1061,68 @@
 <li>Dados do funcionário incluem nome, CPF, e-mail, cargo e data de contratação.  </li>
 </ul>
 <hr />
-<h2 id="em-andamento">🟡 Em andamento</h2>
-<p><em>Histórias que estão em desenvolvimento.</em>  </p>
-<h2 id="concluido">🟢 Concluído</h2>
-<p><em>Histórias que já foram finalizadas.</em>  </p>
+<h2 id="board-kanban">Board Kanban</h2>
+<table>
+<thead>
+<tr>
+<th>História</th>
+<th>Implementada</th>
+<th>Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>H1 — Produto Base</td>
+<td>✅ Completo</td>
+<td>CRUDs completos para Medicamento, CuidadoPessoal, SuplementoAlimentar</td>
+</tr>
+<tr>
+<td>H2 — Fornecedor</td>
+<td>✅ Completo</td>
+<td>CRUD completo com validação CNPJ</td>
+</tr>
+<tr>
+<td>H3 — Armazéns</td>
+<td>✅ Completo</td>
+<td>CRUD completo + campo quantidade_minima implementado</td>
+</tr>
+<tr>
+<td>H4 — Itens de Estoque</td>
+<td>✅ Completo</td>
+<td>CRUD completo com relacionamentos</td>
+</tr>
+<tr>
+<td>H5 — Movimentação Estoque</td>
+<td>✅ Completo</td>
+<td>CRUD + lógica atualizar estoque + auth obrigatória</td>
+</tr>
+<tr>
+<td>H6 — Consulta Estoque</td>
+<td>✅ Completo</td>
+<td>Endpoints implementados com filtros avançados + auth</td>
+</tr>
+<tr>
+<td>H7 — Relatório Vencidos</td>
+<td>✅ Completo</td>
+<td>Relatórios completos + exportação CSV + filtros</td>
+</tr>
+<tr>
+<td>H8 — Relatório Movimentações</td>
+<td>✅ Completo</td>
+<td>Relatórios completos + exportação CSV + filtros</td>
+</tr>
+<tr>
+<td>H9 — Alerta Estoque Crítico</td>
+<td>✅ Completo</td>
+<td>Sistema completo de alertas + dashboard + configurações</td>
+</tr>
+<tr>
+<td>H10 — Autenticação</td>
+<td>✅ Simplificado</td>
+<td>Login básico implementado (sem JWT)</td>
+</tr>
+</tbody>
+</table>
 
 
 
